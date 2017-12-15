@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>05作业第1题</title>
+</head>
+<body>
+	<img src="images/1_01.jpg" animal="dog" alt="切换图片源">
+
+	<script>
+		
+		var oImg=document.getElementsByTagName("img")[0];
+		oImg.onclick=function(){
+			var animal=this.getAttribute("animal");
+			if(animal=="dog"){
+				this.src="images/2_02.jpg";
+				this.setAttribute("animal","panda");
+			}
+			else{
+				this.src="images/1_01.jpg";
+				this.setAttribute("animal","dog");
+			}
+		}
+	</script>
+</body>
+</html>

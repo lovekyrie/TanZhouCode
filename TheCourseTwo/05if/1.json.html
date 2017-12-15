@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Json</title>
+</head>
+<body>
+	<script>
+		var json={
+			"name":"嘻嘻",
+			age:18
+		}; //字面量 使用字面量的时候 不要在最后一个键值对后面添加,
+		var obj=new Object();
+		// 上面两种没有任何区别
+		console.log(obj);
+		console.log(json);
+		/*
+			对象.属性(键) 值
+			obj.name="名字";
+			键值对
+		*/
+		obj.name="名字";
+		obj.age="年龄";
+		console.log(obj);
+	</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>if条件判断</title>
+</head>
+<body>
+	<script>
+		/*
+			Js只有一下六种值 可转换布尔值的false
+			there are six value can transform false.
+			null false 0  ""(两个引号连在一起) undefined NaN
+			我要去国外：
+			条件：money 英语
+
+			if(condition){
+				goal;//do something
+			}
+
+			if(condition){
+				goal;//do something
+			}
+			else{
+				//!condition can't do something/may be go home.
+			}
+
+			条件可以使任何东西，如果不是布尔值，那么会转换成布尔值
+			condition can any expression.if the result not boolean,can transform boolean(enfore)
+
+			if(condition one){
+				
+			}
+			else if(condition two){
+	
+			}
+			else if(condition three){
+	
+			}...
+			else{
+				 the last possible
+			}
+		*/
+		var bool=false;
+		/*if(bool){
+			// condition result is OK(true).
+			alert("是真的");
+		}
+		else{
+			//condition result is false.
+			alert("假的爱");
+		}*/
+
+		var money=10010;
+		if(money>20000){
+			alert("去美国");
+		}
+		else if(money >10000){
+			alert("东南亚");
+		}
+		else{
+			alert("国内游");
+		}
+
+	</script>
+</body>
+</html>

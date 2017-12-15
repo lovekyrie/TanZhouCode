@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>作业02</title>
+    <style>
+    	div{
+    		height: 200px;
+    		width: 200px;
+    		border:1px solid red;
+    	}
+    </style>
+</head>
+
+<body>
+    <input class="btn" type="button" value="改变box1的颜色" />
+    <input class="btn" type="button" value="改变盒子的宽高">
+    <div id="box">
+    	box1
+    </div>
+
+    <script>
+    	
+    	var btnOne=document.getElementsByClassName("btn")[0],
+    		btnTwo=document.getElementsByClassName("btn")[1];
+    		odivBox=document.getElementById("box");
+
+
+    		btnOne.onclick=function(){
+
+    			odivBox.style.backgroundColor="red";
+    		}
+
+    		btnTwo.onclick=function(){
+    			//弹出框
+    			var width=	prompt("请输入元素的宽度","200px");
+    			var height=	prompt("请输入元素的高度","200px");
+
+    			odivBox.style["width"]=width+"px";
+    			odivBox.style["height"]=height+"px";
+    		}
+    </script>
+</body>
+
+</html>

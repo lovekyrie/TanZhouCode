@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>with</title>
+</head>
+<body>
+
+	<div id="box1">1</div>
+	<div id="box2">2</div>
+	<div id="box3">3</div>
+	<script>
+		/*
+			with语句 不建议使用，影响性能
+			with(对象){
+				代码
+			}
+		*/
+
+		console.time(1);
+		var oBox1=document.getElementById("box1");
+		var oBox2=document.getElementById("box2");
+		var oBox3=document.getElementById("box3");
+		console.timeEnd(1);
+
+		console.time(2);
+		with(document){
+			var oBox1=getElementById("box1");
+			var oBox2=getElementById("box2");
+			var oBox3=getElementById("box3");
+		}
+		console.timeEnd(2);
+	</script>
+</body>
+</html>

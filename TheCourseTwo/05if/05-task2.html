@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>05作业第2题</title>
+    <style>
+    .container {
+        padding: 10px;
+        width: 400px;
+        height: 250px;
+        border: 1px solid #000;
+        background-color: #E3DFDF;
+    }
+
+    .container .userinput {
+        height: 190px;
+        background-color: #ffffff;
+    }
+
+    .send {
+        margin-top: 10px;
+    }
+
+    .send .submitbtn {
+        float: right;
+        margin-top: 15px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="userinput" contenteditable></div>
+        <div class="send">
+            <img src="images/1_01.jpg" animal="dog" alt="点击可切换图片" width="40px" height="40px">
+            <button class="submitbtn">发送</button>
+        </div>
+        <ul class="content-list"></ul>
+    </div>
+    <script>
+    //得到每个元素
+    var inputCmp = document.getElementsByClassName("userinput")[0];
+    var imgCmp = document.getElementsByTagName("img")[0];
+    var btnCmp = document.getElementsByClassName("submitbtn")[0];
+    var listCmp = document.getElementsByClassName("content-list")[0];
+
+	imgCmp.onclick=function(){
+			var animal=this.getAttribute("animal");
+			if(animal=="dog"){
+				this.src="images/2_02.jpg";
+				this.setAttribute("animal","panda");
+			}
+			else{
+				this.src="images/1_01.jpg";
+				this.setAttribute("animal","dog");
+			}
+		}
+
+    btnCmp.onclick = function() {
+
+    	if(inputCmp.innerHTML!=""){
+        	listCmp.innerHTML += "<li><img src=" + imgCmp.src + ">" + inputCmp.innerText +
+            "</li>"
+        }
+    }
+    </script>
+</body>
+
+</html>

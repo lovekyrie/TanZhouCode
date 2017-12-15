@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业</title>
+	<style>
+		#box{
+			width: 200px;
+			height: 200px;
+			border: 1px solid red;
+		}
+	</style>
+	<!-- prompt兼容性较差 全部弹窗弹完 才能修改 -->
+</head>
+<body>
+	<input class="btn" type="button" value="改变颜色">
+	<input class="btn" type="button" value="改变颜色">
+	<input class="btn" type="color">
+	<div id="box"></div>
+	
+	<script>
+		/*
+			Elements
+			All
+
+			ID
+			querySelector
+		*/
+
+		// 获取按钮
+		var aBtns=document.getElementsByClassName("btn");
+
+		// 获取ID
+		var oBox=document.getElementsByTagName("div")[0];
+		
+		aBtns[0].onclick=function(){
+			
+			var color=prompt("请输入颜色");
+			oBox.style.backgroundColor=color;
+
+		}
+
+		aBtns[1].onclick=function(){
+
+		}
+
+		//表单元素值发生改变时触发的函数
+		aBtns[2].onchange=function(){
+
+			oBox.style.backgroundColor=this.value;
+		}
+	</script>
+</body>
+</html>

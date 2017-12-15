@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>switch case</title>
+</head>
+<body>
+	<script>
+		/*
+			switch(固定变量){
+				case condition1:
+					experssion;
+					break;
+				case condition2:
+					expression;
+					break;
+				case condition3:
+					expression;
+					break;
+				case condition4:
+					expression;
+					break;
+				.....
+				defalut;
+				上面的都不滿足就這個
+			}
+		*/
+
+		var money=10000;
+		// 当需要满足两个条件的时候，就连续写两个case,不跳出循环
+		switch(money){
+			case 5000:
+				alert("国内");
+				break;
+			case 10000:
+				alert("东南");
+				break;
+			defalut:
+				alert("梦游");
+		}
+	</script>
+</body>
+</html>

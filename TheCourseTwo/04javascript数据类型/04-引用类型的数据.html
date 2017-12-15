@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>引用类型的数据</title>
+	<style>
+		#box{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+
+	<script>
+		var oBox=document.getElementById('box');
+
+		console.log(typeof oBox);
+
+		//定义一个数组
+		var arr=[];
+		// var arr1=new Array();
+		console.log(typeof arr);
+
+		// 定义一个JSON
+		var json={};
+		console.log(typeof json);
+
+		// 系统对象
+		console.log(typeof document);
+
+		/*
+			var arr1=[1,"1",true,null,undefined,[],{}];
+			堆存储里面有一个对象存储[1,"1",true,null,undefined,[],{}]
+
+			arr1通过一个指针指向这个数组
+
+			var arr2=arr1;
+			arr2也只想这个[1,"1",true,null,undefined,[],{}]
+			引用类型的数据互相影响
+			改变对象的值
+		*/
+		var arr1=[1,"1",true,null,undefined,[],{}];
+		//类数组
+		console.log(arr1);
+
+		var arr2=arr1;
+		console.log(arr2);
+
+		arr2=[2,"2",true,null,undefined,[],{}];
+		console.log(arr2);
+
+		console.log(arr1);
+	</script>
+</body>
+</html>

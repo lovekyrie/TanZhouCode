@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>操作符</title>
+</head>
+<body>
+	<script>
+		/*
+			= 赋值
+			操作符(判断) 返回的结果是一个布尔值(true)
+			>  2>1
+			<  1<2
+			>= 2>=1
+			<= 1<=2
+			== 判断两个值是不是相等
+			!= 判断两个值是不是不相等
+			=== 值相等+数据类型相等
+			!== 值不相等+数据类型相等
+		*/
+
+		var a;//undefined
+		console.log(2>1); //true
+		console.log(1>2); //false 
+
+		console.log(a=true);//所有情况下都是真的
+		console.log(a==false);
+
+		console.log(2>=3);
+		var num1=1;
+		var str1="1";
+		console.log(num1==str1);	//true
+		console.log(num1===str1); //false
+
+		//null 与undefined
+		// undefined是null派生出来的 ？
+		console.log(null==undefined); //true
+		console.log(null ===undefined);//false
+	</script>
+</body>
+</html>

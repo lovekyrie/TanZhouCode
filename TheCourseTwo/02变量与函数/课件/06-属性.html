@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="box" class="box"></div>
+	<script>
+		/*
+			标签属性：id class 添加到HTML标签里面的
+			对象属性(js属性)：通过
+		*/
+
+		var oBox=document.getElementById("box");
+		console.log(oBox);
+
+		//自带的
+		console.log(oBox.id);
+		console.log(oBox.className);
+
+		//认为添加
+		console.log(oBox.haha);
+		oBox.haha="哈哈";
+		console.log(oBox.haha);
+
+		//修改属性值
+		oBox.id="wrap";
+		console.log(oBox);
+		console.log(oBox.id);
+
+	</script>
+</body>
+</html>

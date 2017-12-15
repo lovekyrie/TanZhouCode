@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js数据类型</title>
+</head>
+<body>
+	<script>
+		/*
+			两大类
+				基本(简单)数据类型：
+					number(数字)
+						1,2,3 1.1,2.2 0
+					boolean(布尔值)
+						只有两个值 true false
+						但是许多东西都可以转化为这两个值
+					string(字符串)
+						使用引号包裹起来的"1" "2" "3"
+					null (空)
+					undefined(未定义)
+				引用(复杂)数据类型
+					object(对象)
+						获取的节点(oBox)
+						array
+						json
+						系统的对象
+						function
+					ES6-symbol()
+		*/
+
+		/*
+			在控制台中，打印日志(log),数字以及布尔值的颜色 蓝色的
+		*/
+
+		var num=1; //表达式
+		console.log(num); //蓝色
+		console.log(typeof num);
+
+		var bool=false;
+		console.log(bool);
+		console.log(typeof bool);
+
+		var str1="false";
+		console.log(str1);
+		console.log(typeof str1);
+
+		var str2="1";
+		console.log(str2);
+		console.log(typeof str2);
+		console.log(typeof "str2");
+
+		var b;
+		console.log(typeof a); //，没有定义 undefined
+		console.log(typeof b); // 定义了但是没有复制 也是 undefined
+
+		var c=null;
+		console.log(typeof c); //object
+
+		var d="";
+		console.log(typeof d);
+
+		function fn(){
+			alert(1);
+		}
+
+		// function实质上就是对象
+		console.log(typeof fn);//function
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box1"><span>我是盒子1</span></div>
+	<div id="box2"><span>我是盒子2</span></div>
+	<div id="box3">我是盒子3</div>
+	<div id="box4">我是盒子4</div>
+	<script>
+		var oBox1=document.getElementById("box1");
+		var oBox2=document.getElementById("box2");
+		var oBox3=document.getElementById("box3");
+		var oBox4=document.getElementById("box4");
+		/*
+			innerHTML:获取元素里面的文字 可以获取HTML标签 可以解析HTML标签
+			innerText:获取元素里面的文字 不可以获取HTML标签 不可以解析HTML标签
+
+			outerHTML :包括自己的标签
+
+			textContent: 获取文本，可以获取隐藏标签里面的文字 //为了兼容firefox
+		*/
+		//修改
+		console.log(oBox1.innerHTML);
+		console.log(oBox2.innerText);
+
+		//修改
+		oBox3.innerHTML="<span>修改后的盒子3</span>";
+		//+= 保留之前的文本，继续添加
+		oBox4.innerText +="<span>修改后的盒子4</span>";
+
+		//获取 outerHTML
+		console.log(oBox1.outerHTML);
+
+		//textContent
+		console.log(oBox4.textContent);
+	</script>
+</body>
+</html>

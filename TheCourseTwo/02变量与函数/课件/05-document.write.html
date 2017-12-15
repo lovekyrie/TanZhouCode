@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>document.write</title>
+</head>
+
+<body>
+	<div>1234</div>
+    <script>
+    // document.body.innerHTMl+="哈哈哈";
+
+    window.onload = function() {
+        //不会使用它  会修改整个文档流(onload是所有加载完成以后，再执行)
+        document.open();
+        document.write("哈哈哈");
+        document.close();
+    }
+    </script>
+</body>
+
+</html>

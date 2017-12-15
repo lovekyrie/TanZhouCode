@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div p{
+			width: 100px;
+			height: 100px;
+			background-color: #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="box" class="box"></div>
+	<div id="box1" class="box"></div>
+	<input type="text" name="name">
+	<div id="box3">
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</div>
+	<script>
+		/*
+			1.通过ID名字获取元素 document.getElementById("box");
+			2.通过CalssName获取元素 document.getElementsByClassName();
+			3.通过Name获取元素document.getElementsByName 一般用于表单元素
+			4.通过标签名字获取元素document.getElementsByTagName("TagName")
+				下面两个方法 括号里的东西 符合CSS规则
+			5.document.querySelector() 选择一个
+			6.document.querySelectorAll() 选择多个
+			特殊的标签
+			document.body 
+			document.head
+			document.title
+
+			需要注意的事项:
+			除了特殊标签以及ID获取,其他的可以把document换成一个标签
+			 
+			命名规则:
+			 	a.见名之意
+			 		o==>object 对象
+			 		a==>array 数组
+			 	b.驼峰命名(第一个单词首字母小写，其它全部大写)
+			 		get Element By Id
+			 		全部大写(一般用于常量)
+			 	c.使用的字符：
+			 		数字 字母 $ _ 不能以数字开头
+
+			 IE8以下不支持 ByClassName
+			 IE7以下不支持 querySelector
+			
+		*/
+		/*var oBox=document.getElementById("box");
+		alert(oBox);
+		var oBox1=document.getElementById("box1");
+		alert(oBox1);*/
+
+		//计数的时候从0开始
+		var aBox1=document.getElementsByClassName("box")[0],
+			aBox2=document.getElementsByClassName("box")[1];
+		console.log(aBox1);
+		console.log(aBox2);
+
+		//name
+		var oInput=document.getElementsByName("name")[0];
+		console.log(oInput);
+
+		//tagname
+		var oBox1=document.getElementsByTagName("div")[0];
+			oBox2=document.getElementsByTagName("div")[1];
+		console.log(oBox1);
+		console.log(oBox2);
+
+		//querySelector
+		//获取div 下面的第一个 p标签
+		var oP=document.querySelector("div p");
+		console.log(oP);
+
+		//querySelectorAll
+		var oP1=document.querySelectorAll("div p")[1];
+		console.log(oP1);
+
+		//特殊的标签
+		console.log(document.body);
+		console.log(document.head);
+		console.log(document.title);
+
+		//获取 id=box3 的div下面的第一个P标签
+		var aBox3=document.getElementById("box3");
+		var P=aBox3.getElementsByTagName("p")[0];
+		console.log(p);
+	</script>
+</body>
+</html>

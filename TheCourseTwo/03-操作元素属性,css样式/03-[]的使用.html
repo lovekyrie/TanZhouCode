@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			width: 200px;
+			height: 200px;
+			border:1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		var oBox=document.getElementById("box");
+
+		var width="background-color";
+		obo.onclick=function(){
+			//中括号里面 要用字符串 否则表示一个变量
+			// 在样式允许的情况下 =右边可以设置多个值
+			this.style[width]="red";
+
+			//如果你确定要写的这个 那么就是使用. 否则使用[]
+		}
+	</script>
+</body>
+</html>

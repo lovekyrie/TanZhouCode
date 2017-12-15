@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>对象与函数结合</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		/*
+			事件：
+
+		*/
+		var oBox=document.getElementById("box");
+
+		// 给oBox绑定(注册)一个时间
+		// 匿名函数 跟在事件后面会执行
+		oBox.onclick=function () {
+			alert(oBox.id);
+		}
+
+		//this,谁触发这个函数，this就是谁
+	</script>
+</body>
+</html>

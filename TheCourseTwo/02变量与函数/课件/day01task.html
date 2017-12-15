@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业1</title>
+
+	<style>
+		div{
+			width: 200px;
+			height: 100px;
+			border:solid 1px red;
+			margin-bottom: 20px;
+			line-height: 100px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1">box1box1box1box1box1box1box1box1box1</div>
+	<div id="box2"></div>
+
+	<script>
+		var oBox1=document.getElementById("box1");
+		var oBox2=document.getElementById("box2");
+
+		var box1Html=oBox1.innerHTML;
+		var box2Html=oBox2.innerHTML;
+		console.log(oBox1);
+		console.log(oBox2);
+		
+		oBox1.onclick=function(){
+
+			// oBox1.innerHTML="点击的box1";
+			this.innerHTML="点击的box1";
+			oBox2.innerHTML="box1被点击了";
+		}
+
+		//over/out是一组
+		//enter/leave是一组
+		oBox2.onmouseenter=function(){
+
+			oBox1.innerHTML="<span>box2里面有鼠标移进去了</span>";
+			// this.innerHTML="鼠标移入了box2";
+			oBox2.innerHTML="<span>鼠标移入了box2</span>";
+		}
+
+		oBox2.onmouseleave=function(){
+
+			oBox1.innerHTML=box1Html;
+			this.innerHTML=box2Html;
+		}
+		//this就是触发这个函数的对象
+	</script>
+</body>
+</html>
