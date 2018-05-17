@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>伪类</title>
+    <link rel="stylesheet" href="">
+    <style>
+    	*{
+    		margin: 0;
+    		padding: 0;
+    	}
+
+    	a{
+    		text-decoration: none;
+    		display: block;
+    	}
+
+    	ul{
+    		list-style: none;
+    	}
+
+    	body{
+    		font-size: 50px;
+    	}
+		
+	/*	a{
+			color: red;
+		}*/
+		/*
+			伪类：
+			没有给元素定义类名，可以通过样式的方式给元素添加特殊效果
+				字面意思：假的类名*/
+    	a:link{
+    		color: orange;
+    	}
+		
+		.box:visited{
+    		color: yellow;
+    	}
+
+    	.wrap:visited{
+    		color: blue;
+    	}
+
+    	p{
+    		width: 300px;
+    		height: 300px;
+    		background-color: red;
+    		transition: 1s;
+    	}
+
+		/*鼠标按下不松开的样式*/
+    	p:active{
+    		background-color: blue;
+    	}
+		
+		/*鼠标划入应用样式*/
+    	p:hover{
+    		background-color: green;
+    		transform: rotate(180deg);
+    	}
+    </style>
+</head>
+
+<body>
+    <div>
+    	<a href="http://baidu.com" class="box">木马木马我爱你</a>
+    	<a href="http://baidu.com" class="wrap">就像老鼠爱大米</a>
+    </div>
+    <p></p>
+</body>
+
+</html>

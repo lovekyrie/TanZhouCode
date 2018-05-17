@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>apply</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+			call
+			apply
+				第一的参数：修改函数中this的指向
+				第二个参数：一些值以数组的显示传递
+			改变
+				函数调用的时候this 指向 并传递参数 
+			bind
+				函数定义的时候修改 this指向
+		*/
+		var obj={
+			"name":"哈哈"
+		};
+
+		var name="嘻嘻";
+		function fn(){
+			console.log(this.name);
+		};
+		fn();
+		window.fn.call(obj,["name","age"]);
+
+	</script>
+</body>
+</html>

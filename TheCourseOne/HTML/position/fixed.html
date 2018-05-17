@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>固定定位</title>
+    <style>
+    body {
+        height: 2000px;
+    }
+
+    .toptitle {
+        background-color: #f00;
+    }
+
+    .backtotop {
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background-color: gray;
+        text-align: center;
+        line-height: 30px;
+        color: #fff;
+        text-decoration: none;
+        /*去掉超链接的下划线*/
+    }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="inner_c">
+            <ul>
+                <li>
+                    <a href="#">网页栏目</a>
+                    <a href="#">网页栏目</a>
+                    <a href="#">网页栏目</a>
+                    <a href="#">网页栏目</a>
+                    <a href="#">网页栏目</a>
+                    <a href="#">网页栏目</a>
+                    <a href="#">网页栏目</a>
+                    <a href="#">网页栏目</a>
+                    <a href="#">网页栏目</a>
+                    <a href="#">网页栏目</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="toptitile">
+        亲亲的尝一口，这香浓的诱惑
+    </div>
+    <a class="backtotop" href="#"></a>
+</body>
+
+</html>

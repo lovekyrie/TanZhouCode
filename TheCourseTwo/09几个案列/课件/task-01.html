@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>09作业1</title>
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    #box {
+        margin: 50px auto 0;
+        width: 500px;
+    }
+
+    .list li {
+        margin-bottom: 2px;
+        line-height: 35px;
+        background: url("images/ck.png") no-repeat 10px;
+        text-indent: 40px;
+        cursor: pointer;
+    }
+
+    .list li.checked {
+
+        background: url("images/cked.jpg") no-repeat 10px;
+    }
+
+    .list li:nth-child(2n+1) {
+        background-color: #999;
+    }
+
+    .list li:nth-child(2n) {
+        background-color: #bbb;
+    }
+
+    .check-all,
+    .check-reversal {
+        padding: 0 10px;
+        display: inline-block;
+        border: 1px solid #000;
+        background: #2D98BC url("images/ck.png") no-repeat;
+        text-indent: 20px;
+        cursor: pointer;
+    }
+
+    .checked {
+        background: #2D98BC url("images/cked.jpg") no-repeat;
+    }
+
+    .check-reversal {
+        background-image: none;
+        text-indent: 0px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul class="list">
+            <li>私奔</li>
+            <li>北京北京</li>
+            <li>我爱你中国</li>
+            <li>花火</li>
+            <li>回来</li>
+            <li>双节棍</li>
+            <li>哎呦，不错哦</li>
+        </ul>
+        <div class="check-all">全选</div>
+        <div class="check-reversal">反选</div>
+    </div>
+    <script>
+    /*
+                			1.实现全选(当勾全勾上的时候，全选也打勾，去掉一个则不打勾全选)
+                			2.实现反选(就是把剩下其他未选择的选中)
+                		*/
+
+    var aLi = document.getElementsByTagName("li");
+    var oCheckDiv = document.getElementsByClassName("check-all")[0];
+    var oReversalDiv = document.getElementsByClassName("check-reversal")[0];
+    var checkCount = 0;
+
+    for (var i = 0; i < aLi.length; i++) {
+
+        if (aLi[i].className === 'checked') {
+            checkCount++;
+        }
+
+        aLi[i].isChecked = false;
+        aLi[i].onclick = function() {
+            if (!this.isChecked) {
+                this.className = "checked";
+                checkCount++;
+            } else {
+                this.className = "";
+                checkCount--;
+            }
+
+            if (checkCount == aLi.length) {
+                oCheckDiv.className += ' checked';
+            } else {
+                oCheckDiv.className = 'check-all';
+            }
+            this.isChecked = !this.isChecked;
+        }
+    }
+
+    var isCheckAll = false;
+    // 全选
+    oCheckDiv.onclick = function() {
+
+        if (!isCheckAll) {
+            for (var i = 0; i < aLi.length; i++) {
+                aLi[i].className = "checked";
+                aLi[i].isChecked=true;
+            }
+            this.className += " checked";
+        } else {
+            for (var i = 0; i < aLi.length; i++) {
+                aLi[i].className = "";
+                aLi[i].isChecked=false;
+            }
+            this.className = "check-all";
+        }
+
+        isCheckAll = !isCheckAll;
+    }
+
+    oReversalDiv.onclick = function() {
+        /*先得到那些事选择的，然后取反*/
+        var reversalCount=0;
+        for (var i = 0; i < aLi.length; i++) {
+            if (aLi[i].className === 'checked') {
+                aLi[i].className = '';
+                reversalCount--;
+            } else {
+                aLi[i].className = 'checked';
+                reversalCount++;
+            }
+
+            if (reversalCount == 7) {
+                oCheckDiv.className += ' checked';
+            } else {
+                oCheckDiv.className = 'check-all';
+            }
+        }
+
+
+    }
+    </script>
+</body>
+
+</html>

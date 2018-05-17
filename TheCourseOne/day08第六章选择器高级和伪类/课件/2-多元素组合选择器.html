@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>多元素组合选择器</title>
+    <link rel="stylesheet" href="">
+    <style>
+
+    /* 子元素选择器 选择div的子元素span*/
+
+    div>p>span {
+        font-size: 30px;
+        color: red;
+    }
+
+    /* 兄弟元素选择器 同级 紧随其后*/
+	div>p+p{
+		font-size: 30px;
+		color: orange;
+	}
+    </style>
+</head>
+
+<body>
+    <div>
+        <p><span>亲爱的同学们</span></p>
+        <p><span>大家晚上好</span></p>
+        <p><b>大家晚上好</b></p>
+        <p><b>大家早上好</b></p>
+        <span>欢迎大家来到木马的课堂</span>
+        <span>我想说:木马是最帅的！</span>
+    </div>
+</body>
+
+</html>

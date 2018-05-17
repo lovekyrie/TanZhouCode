@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #box {
+        margin: 50px auto;
+        width: 250px;
+        height: 250px;
+        border: 1px dotted #000;
+    }
+
+    .items {
+        width: 50px;
+        height: 50px;
+        background: skyblue;
+        text-align: center;
+        line-height: 50px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <!-- 	<div class="items">1</div>
+	<div class="items">2</div>
+	<div class="items">3</div>
+	<div class="items">4</div>
+	<div class="items">5</div> -->
+    </div>
+    <script>
+    var n = 7;
+    var oBox = document.getElementById("box");
+    var aItems = document.getElementsByClassName("items");
+    for (var i = 0; i < n; i++) {
+
+        oBox.innerHTML += '<div class="items">' + i + '</div>';
+    }
+
+    for (var i = 0; i < n; i++) {
+        if (i < n / 2) {
+            aItems[i].style.marginLeft = i * 50 + "px";
+        } else {
+            aItems[i].style.marginLeft = (n - i - 1) * 50 + "px";
+        }
+    }
+    </script>
+</body>
+
+</html>

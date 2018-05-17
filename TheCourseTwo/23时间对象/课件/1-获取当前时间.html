@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>获取当前时间</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		/*
+			new Date();
+		*/
+
+		var oBox=document.getElementById("box");
+		console.log(Date);
+		//本地时间
+		var time=new Date();
+		console.log(time); //Thu Feb 22 2018 21:36:33 GMT+0800 (中国标准时间)
+
+		var res=time.toUTCString();
+		console.log(res); //Thu, 22 Feb 2018 13:36:33 GMT
+		
+	</script>
+</body>
+</html>

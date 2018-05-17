@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo3</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		li{
+			list-style: none;
+		}
+
+		ul{
+			width: 270px;
+			height: 270px;
+			border:1px solid red;
+		}
+
+		ul li{
+			width: 90px;
+			height: 90px;
+			border: 1px solid #000;
+			float: left;
+
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>第1章</li>
+		<li>第2章</li>
+		<li>第3章</li>
+		<li>第4章</li>
+		<li>第5章</li>
+		<li>第6章</li>
+		<li>第7章</li>
+		<li>第8章</li>
+		<li>第9章</li>
+	</ul>
+
+	<script>
+		
+		var aLis=document.getElementsByTagName("li");
+		var aColors=["yellow","blue","green","pink","gray"];
+
+		var color="";
+		for (var i = 0; i < aLis.length; i++) {
+			aLis[i].style.backgroundColor=aColors[i%aColors.length];
+
+			aLis[i].onmouseover=function(){
+				color=this.style.backgroundColor;
+				this.style.backgroundColor="purple";
+			}
+
+			aLis[i].onmouseout=function(){
+				this.style.backgroundColor=color;
+			}
+		}
+	</script>
+</body>
+</html>

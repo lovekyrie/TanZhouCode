@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>后代选择器的多种情况</title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		ul{
+			list-style: none;
+		}
+
+		body{
+			font:italic small-caps bold 18px/2 Simsun,arial,sans-serif;
+		}
+		/*1.当id个数不相等的时候，id多的优先级高
+		  2.当id个数相等的时候 就比class个数
+		  3.当class个数又相等的时候 就比元素选择器个数*/
+		#box .list #mima-1{
+			color: red;
+		}
+
+		#box .list-1 #mima-1 .text{
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap" id="box">
+		<ul class="list">
+			<li class="list-1">
+				<p class="mima" id="mima-1">
+					<span class="text" id="text-1">
+						Today is the memory of one year.
+					</span>
+				</p>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

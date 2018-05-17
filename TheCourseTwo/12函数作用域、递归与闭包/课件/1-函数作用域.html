@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数作用域</title>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		/*
+			作用域:一些东西(变量)的执行范围
+				变量或者对象都是在window下面
+
+			全局作用域：一个script标签就是一个全局的作用域(全局环境)
+			局部作用域：函数 {} (局部环境)
+		*/
+
+		var a="全局";
+		console.log(a);
+		console.log(window.a);
+
+		/*
+			var obj=new Object();
+			obj.name="名字";
+			console.log(obj.name);
+		*/
+
+		function fn(){
+			// b是定义在局部 在全局无法访问 是一个局部变量
+
+			var b="局部";
+			console.log(b);
+
+			// 局部环境 可以访问全局环境中的变量
+			console.log(a);
+			// 这里的this是window，因为fn是在全局作用域下定义的
+			console.log(this);
+		}
+
+		fn();
+		// 全局环境 不可以访问局部环境中的变量
+		// console.log(b);
+
+		box.onclick=function(){
+			console.log(this);
+		}
+		box.onclick();
+		/*
+			相当于var a=function(){console.log(this)};
+			只不过这里用box.onclick
+		*/
+	</script>
+</body>
+</html>

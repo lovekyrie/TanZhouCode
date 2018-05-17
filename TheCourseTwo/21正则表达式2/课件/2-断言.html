@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>断言</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+			^ $ \B
+			(?=.....) 积极的前瞻
+				匹配括号前面的东西 前面的东西 后面跟上括号里面的东西
+			(?!.....) 消极的前瞻
+				匹配()前面的东西   前面的东西不能跟上 括号里面的东西
+		*/
+
+		var reg=/[a-d]+(?=1234)/;
+		var str1="abcd1234";
+		var str2="1234abcd";
+		var str3="abcdefg";
+
+		var res1=str1.match(reg);
+		var res2=str2.match(reg);
+		var res3=str3.match(reg);
+
+		console.log(res1);
+		console.log(res2);
+		console.log(res3);
+
+		console.log('-------------');
+		var reg=/abcd(?!1234)/;
+		var str1="abcd1234";
+		var str2="1234abcd";
+		var str3="abcdefg";
+
+		var res1=str1.match(reg);
+		var res2=str2.match(reg);
+		var res3=str3.match(reg);
+
+		console.log(res1);
+		console.log(res2);
+		console.log(res3);
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>案例</title>
+</head>
+<body>
+	
+	<script>
+	/*	var x=5;
+		a();
+
+		function a(){
+			// 因为洗面定义了x，所以x变量提升，导致不在访问全局作用域的x 这里相当于
+			
+				var x;
+				alert(x);
+				x=10;
+			
+			alert(x);
+			var x=10;
+		}
+		alert(x);*/
+
+		/*
+			定义变量:
+			var x=undefined;
+				a=function()
+
+			代码执行：
+			x=5;
+			a();==>定义变量 x=undefined
+				==>执行alert(x) undefined
+				x=10
+		*/
+
+		var x=5;
+		a();
+		function a(){
+			alert(x);
+			// 这个访问的x值window下面的x
+			x=10;
+		}
+
+		alert(x);
+	</script>
+</body>
+</html>

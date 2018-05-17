@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo4</title>
+	<style>
+		* {
+			margin: 0;padding: 0;
+		}
+		#box {
+			width: 326px;
+			height: 580px;
+			border: 1px solid #000;
+			background: url(g1.jpg);
+		}
+		span {
+			float: left;
+			width: 10%;
+			height: 10%;
+			/*border: 1px solid red;*/
+			box-sizing: border-box;
+			background: url(g4.jpg);
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+
+	<script>
+		var oBox = document.getElementById("box");
+		var aSpans = document.getElementsByTagName("span");
+
+		for (var i = 0; i < 100; i++) {
+			var x = -i%10 * 32.6;
+			var y = -parseInt(i/10) * 58;
+			var pos = x + "px " + y + "px";
+
+			oBox.innerHTML += "<span style='background-position:"+ pos +";'></span>"
+		}
+
+		for (var i = 0; i < aSpans.length; i++) {
+			aSpans[i].onmouseover = function(){
+				this.style.background = "transparent";
+			}
+		}
+
+		// eval("alert(3*6+6)")
+	</script>
+</body>
+</html>

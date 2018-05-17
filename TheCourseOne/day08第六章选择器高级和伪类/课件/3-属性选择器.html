@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>属性选择器</title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		ul{
+			list-style: none;
+		}
+		/*条件*/
+		/*匹配所有具有class属性的元素*/
+		[class]{
+			font-size: 50px;
+		}
+		
+		/*匹配所有焗油class属性并且值等于box的元素*/
+		[class='box']{
+			font-size: 60px;
+			color: red;
+		}
+		
+		/*匹配所有具有class属性并且值等于box 或者包含box的元素 包含的意思是一个属性多个值 只要其中一个满足*/
+		[class~='box']{
+			color: blue;
+		}
+		
+		/*匹配所有具有class属性 并且值等于box 或者以 box- 开头的元素*/
+		[class|='box']{
+			font-weight: blod;
+			color: orange;
+		}
+
+		[class][id='box']{
+			background-color: red;
+		}
+		
+		/*匹配ul元素 下面的具有id属性并且具有class的值等于list 或者以list-开头的元素*/
+		ul [id][class|='list']{
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">亲爱的同学们</div>
+	<img src="" alt="" width="" height="">
+	<p class="box box-1">大家好</p>
+	<ul class="box-1 box">
+		<li class="list-1 listword" id="">我是帅哥木马</li>
+		<li>你们是最胖的</li>
+	</ul>
+	<p class="box-2 list">童鞋们晚上好</p>
+	<p class="" id="box">我爱你们</p>
+</body>
+</html>

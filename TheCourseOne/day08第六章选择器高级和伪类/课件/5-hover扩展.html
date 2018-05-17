@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		ul{
+			list-style: none;
+		}
+
+		div{
+			width: 500px;
+			height: 500px;
+			background-color: red;
+		}
+
+		p{
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+		}
+		
+		/*划入div*/
+		div:hover{
+			background-color: pink;
+		}
+		
+		/*划入div 改变p*/
+		div:hover p{
+			background-color: #000;
+		}
+		
+		/*划入p 改变*/
+		div p:hover{
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<P></P>
+	</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>浮动布局练习</title>
+    <style>
+    .header {
+        width: 970px;
+        height: 103px;
+        margin: 0 auto;
+    }
+
+    .header .log {
+        float: left;
+        width: 277px;
+        height: 103px;
+        background-color: red;
+    }
+
+    .header .nav-up {
+        float: right;
+        width: 137px;
+        height: 49px;
+        background-color: yellowgreen;
+        margin-bottom: 8px;
+    }
+
+    .header .nav-bottom {
+        float: right;
+        width: 679px;
+        height: 46px;
+        background-color: yellowgreen;
+    }
+
+    .content {
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 970px;
+        height: 435px;
+    }
+
+    .content .left {
+        float: left;
+        width: 310px;
+        height: 435px;
+        background-color: #fc0;
+    }
+
+    .rightPart {
+        float: left;
+        width: 650px;
+        height: 435px;
+    }
+
+    .rightPart .main {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        width: 650px;
+        height: 400px;
+    }
+
+    .rightPart .links {
+        margin-left: 10px;
+        width: 650px;
+        height: 25px;
+        background-color: #339900;
+    }
+
+    .rightPart .main .news {
+        float: left;
+        width: 450px;
+        height: 400px;
+    }
+
+    .rightPart .main .hotopic {
+        float: left;
+        margin-left: 10px;
+        width: 190px;
+        height: 400px;
+        background-color: #cc3399;
+    }
+
+    .rightPart .main .news .mid-1 {
+        height: 240px;
+        background-color: #3399ff;
+    }
+
+    .rightPart .main .news .mid-2 {
+        margin-top: 10px;
+        height: 110px;
+        background-color: #3399ff;
+    }
+
+    .rightPart .main .news .mid-3 {
+        margin-top: 10px;
+        height: 30px;
+        background-color: #3399ff;
+    }
+
+    .footer{
+        margin:  10px auto;
+        width: 970px;
+        height: 35px;
+        background-color: #000099;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="log"></div>
+        <div class="nav-up"></div>
+        <div class="nav-bottom"></div>
+    </div>
+    <div class="content">
+        <div class="left"></div>
+        <div class="rightPart">
+            <div class="main">
+                <div class="news">
+                    <div class="mid-1"></div>
+                    <div class="mid-2"></div>
+                    <div class="mid-3"></div>
+                </div>
+                <div class="hotopic"></div>
+            </div>
+            <div class="links"></div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+</body>
+
+</html>

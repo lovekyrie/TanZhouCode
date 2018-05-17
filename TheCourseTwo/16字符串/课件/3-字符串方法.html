@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>字符串方法</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var str='字符串方法字符串方法字符串方法';
+
+		/*
+			方法在各个浏览器都兼容
+			字符方法:
+				charAt(); 获取指定位置的字符
+				charCodeAt(); 获取指定位置的字符 的字符编码
+
+				fromCharCode(): 把字符编码转换为指定的字符
+
+			字符操作方法：
+				字符串拼接
+					concat() 
+				
+				字符串切割
+					substr()
+					substring()
+					slice()
+					截取的时候，从第几位开始(包括该位)
+					两个参数都是整数的时候，按照正常的方法
+					两个参数都是负数的时候
+						substr:第一个参数 往后数，第二个参数截取多少位，负数转为0
+						substring:把负数变为0 然后比较两个参数的大小 并重新排序
+						slice: 都是倒着数
+					截取的时候只能正向截取
+		*/
+		console.log(str.charAt(4));
+		// 如下方法 IE8以下不支持
+		console.log(str[4]);
+
+		console.log(str.charCodeAt(4));
+
+		console.log(String.fromCharCode(26041));
+
+		// for(var i=0;i<10000;i++){
+		// 	document.write(String.fromCharCode(i));
+		// }
+
+		/*for(var i=0;i<str.length;i++){
+			document.write(str.charCodeAt(i)+'<br/>');
+		}*/
+
+		// concat 此方法不影响字符串自身 更多的时候 我们使用 +号拼接
+		var str1="我";
+		var res=str1.concat("洗","惠安");
+		console.log(res);
+
+		console.log(str1);
+
+		// substring substr slice
+		var str2="人生得意须尽欢，莫使金樽空对月";
+		console.log(str2.substr(3));
+		console.log(str2.substring(3));
+		console.log(str2.slice(3));
+
+		console.log(str2.substr(3,9)); //第二个参数表示截取多少位(从坐标为3开始的截取，直到截取满9个字符为止) //意须尽欢，莫使金樽
+		console.log(str2.substring(3,9)); //第二个参数 表示截取到第9位，但不包括	//意须尽欢，莫
+		console.log(str2.slice(3,9)); //同上 //意须尽欢，莫
+
+		console.log("---------------------");
+		console.log(str2.substr(-3)); //从末尾开始取三个字符 //空对月
+		console.log(str2.substring(-3));	//把负数转换成0  //人生得意须尽欢，莫使金樽空对月
+		console.log(str2.slice(-3)); //从末尾开始取三个字符	//空对月
+
+		console.log("---------------------");
+		console.log(str2.substr(3,-6)); //第二个参数如果是负数，转换为0
+		console.log(str2.substring(3,-6));	//把负数转换成0 3,0==>0,3 //人生得
+		console.log(str2.slice(3,-5)); // 第二个参数 从末尾倒着数
+		console.log(str2.slice(-3,-6)); //空字符串 因为不能反着截取
+	</script>
+</body>
+</html>

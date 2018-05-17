@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示类型转换</title>
+</head>
+<body>
+	
+	<script>
+		/*
+			Number()方法:把一些东西强制转换为数值
+				1,数值
+				2,只包含数值的字符串 ""=>0
+				3,布尔值 false==>0 true==>1
+				4,undefined
+				5,null==>0
+		*/
+
+		var a=10;
+		var b="20";
+		var c="xixi";
+		var d="20hh";
+		var e=100.1;
+		var f="100.1";
+
+		console.log(Number(a));
+		console.log(Number(b));
+		console.log(Number(c));
+		console.log(Number(d)); //NaN
+		console.log(Number(true)); //1
+		console.log(Number(false)); //0
+		console.log(Number(e));
+
+		console.log(Number(undefined)); //NaN
+		console.log(Number(null)); //0
+
+		console.log(Number("")); //0
+	</script>
+</body>
+</html>

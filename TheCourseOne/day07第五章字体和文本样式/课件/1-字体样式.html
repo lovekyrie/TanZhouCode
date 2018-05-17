@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>字体样式</title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		a{
+			text-decoration: none;
+		}
+		
+		body{
+			font-size: 30px;
+		}
+
+		ul{
+			list-style: none;
+		}
+		
+		html{
+			font-size: 50px;
+		}
+
+		.box{
+			color:rgb(255,0,0);
+			/*字体风格*/
+			font-family: 'Arial','Microsoft Yahei';
+			/*字体大小
+				px 具体的值
+				百分比相对于父级字体大小
+				em同理 也是相对于父级
+				rem 相对于跟标签的字体大小来改变 一般情况下用于移动端布局 
+			*/
+			font-size: 1rem ;
+			
+			/*字体粗细*/
+			font-weight:bold ;
+			font-weight: lighter;
+			font-weight: normal;
+			font-weight: 900; /*100-900之间的值 不用写单位*/
+
+			/*字体倾斜*/
+			font-style: italic;
+			font-style: oblique;
+			
+		}	
+		
+		p{
+			font-size: 50%;  
+		}
+
+		i{
+			font-style: normal;
+		}
+
+		span{
+			/*小型大写字母*/
+			font-variant: small-caps;
+		}
+		
+		.box-1{
+			border: 5px solid red;
+
+			/*
+				行高 (默认能继承)
+					px
+					% 根据自身字体的大小决定 
+					em 根据自身字体的大小决定 
+			*/
+			line-height: 2;
+		}
+
+		.box-1 p{
+
+			font-size: 50px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		木马老师太帅了
+		<p>
+			木马是一种病毒
+		</p>
+		<i>同学们太棒了</i>
+		<span>woainimen MUMA</span>
+	</div>
+
+	<div class="box-1">
+		潭州最帅木马
+		<p>我是不是该安静的走开，还是勇敢的留下来</p>
+	</div>
+</body>
+</html>

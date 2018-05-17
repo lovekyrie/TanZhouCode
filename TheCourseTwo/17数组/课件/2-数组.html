@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>新建一个数组</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<script>
+		/*
+			Array.isArray(aDivs)判断是不是一个数组
+		*/
+		var aDivs=document.getElementsByTagName("div");
+		var arr=["1",2,["2",2],{
+			"name":"16"
+		},null,undefined];
+
+		Array.isArray(arr);
+		console.log(typeof arr);
+		console.log(Array.isArray(arr));
+		console.log(arr);
+		console.log(aDivs);
+		console.log(Array.isArray(aDivs)); //不适用类数组(伪数组)
+		// console.log(instanceof arr);
+
+		var arr1=[];
+		arr1[0]="2";
+		arr1[5]=5;
+		arr1.length=10; //可读可写
+		console.log(arr1);
+		console.log(arr1[2]=="");//false
+
+		// new Array(10) 参数如果是一个数字表示一个长度
+		// new Array(10,20) 如果参数是两个，就表示数组的前两项
+		var arr2=new Array("1","2");
+		console.log(arr2);
+	</script>
+</body>
+</html>

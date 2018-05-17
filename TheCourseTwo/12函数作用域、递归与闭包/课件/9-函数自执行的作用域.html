@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数自执行的作用域</title>
+</head>
+<body>
+	
+	<script>
+		/*
+			函数自执行会自成一个作用域
+		*/
+
+		var a="在外面";
+		(function fn(){
+			// 在函数自执行里面定义的变量a是局部变量，会垃圾回收
+			var a=1;
+			console.log(a);
+			console.log(this);
+		})();
+
+		// 报错 不属于window
+		// fn();
+	</script>
+</body>
+</html>

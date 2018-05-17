@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>absolute定位</title>
+	<link rel="stylesheet" href="">
+	<style>
+		.div01{
+			margin: 50px auto;
+			width: 590px;
+			height: 290px;
+			position: relative;
+			background-color: #000;
+			border: 1px solid #000;
+		}
+
+		.div02{
+			margin: 45px;
+			width: 505px;
+			height: 210px;
+			position: relative;
+			background-color: #F98814;
+			border: 1px solid #000;
+		}
+
+		.div03{
+			margin: 45px;
+			padding: 15px 50px 15px 15px;
+			width: 355px;
+			height: 90px;
+			background-color: #fff;
+			border: 1px solid #000;
+			font-size: 0;
+		}
+
+		.div03 div{
+			width: 85px;
+			height: 85px;
+			float: left;
+			font-size: 16px;
+			color: #fff;
+			text-align: center;
+			line-height: 85px;
+		}
+
+		.box1{
+			background-color: #EF1414;
+		}
+
+		.box2{
+			background-color: #51D323;
+			position: absolute;
+			left: 150px;
+			top: 40px;
+		}
+
+		.box3{
+			background-color: #1F23D4;
+		}
+
+		.box4{
+			background-color: #B432C1;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="div01">
+		<div class="div02">
+			<div class="div03">
+				<div class="box1">第1个块</div>
+				<div class="box2">第2个块</div>
+				<div class="box3">第3个块</div>
+				<div class="box4">第4个块</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

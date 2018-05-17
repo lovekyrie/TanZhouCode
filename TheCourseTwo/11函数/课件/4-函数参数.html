@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数参数</title>
+</head>
+<body>
+	
+	<script>
+		"use strict";
+		/*
+			function f1(a){
+	
+			}
+		*/
+
+		// var a ="测试";
+		function f1(a){   //这个a就是一个形式参数， 形参 var a="";
+			// console.log(a); 
+		}
+
+		f1("") //调用这个f1的时候，传递一个参数，实际参数=实参(用来给形参赋值) LHS
+
+		function f2(a,b){
+			console.log(a); //15
+			console.log(b); //30 
+			console.log(a/b);  //0.5	
+		}
+
+		f2(15,20);
+		/*
+			f2(15,20,30) 调用方法的时候 ，多个参数不影响结果
+			f2(15)  如果实参数量少于形参数量，则形参得不到值，就会默认undefined 因此结果会是NaN
+			f2(15,20) 正常调用
+		*/
+
+		// 不定参 ==>不定项参数
+		function f3(){
+			// console.log(a);
+			// 使用arguments 不能再严格模式下使用 所有参数的集合 类数组
+
+			for (var i = 0; i < arguments.length; i++) {
+				console.log(arguments[i]);
+			}
+			console.log("不定参");
+		}
+
+		f3(1,2,3);
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浮动特性1</title>
+	<style>
+		.box1{
+			float: left;
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+
+		.box2{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+		}
+
+		span{
+			float: left;
+			width: 300px;
+			height: 300px;
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	<!-- 脱离标准文档流 -->
+	<!-- 绿色的盒子脱离了文档标准流，但是红色没有，这样红色背景的盒子就成了标准文档流中的第一个盒子，
+		所以就渲染在页面的左上角 -->
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<span>长江后浪推前浪，前浪是在沙滩上</span>
+</body>
+</html>

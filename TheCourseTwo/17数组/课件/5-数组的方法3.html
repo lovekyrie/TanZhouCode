@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>数组的方法3</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+			concat()方法 不会改变原来的数组
+
+			slice()方法 不会改变原来的数组
+
+			join() 把数组的每一项拼接为字符串
+		*/
+		var  arr=[1,2,3,4,5];
+		var res=arr.concat(["123","235"],[4,6,8]);
+		console.log(res);
+		console.log(arr);
+
+		// 从第一个参数的下表开始截取，截取到第二个参数的下标
+		var resOne=arr.slice(2,4);
+		console.log(resOne);
+		console.log(arr);
+
+		// join的参数 默认是","
+		var resTwo=arr.join(",");
+		var resDefault=arr.join();
+		console.log(resTwo);
+		console.log(resDefault);
+
+		var  str="任性的包子";
+		var resTr=str.split("").join("---");
+		console.log(resTr);
+	</script>
+</body>
+</html>

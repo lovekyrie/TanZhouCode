@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>日期格式化</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var time=new Date();
+
+		console.log(time);
+		//根据本地时间转换
+		console.log(time.toLocaleString());
+		console.log(time.toLocaleDateString());
+		console.log(time.toLocaleTimeString());
+
+		//根据英文
+		console.log(time.toDateString());
+	</script>
+</body>
+</html>

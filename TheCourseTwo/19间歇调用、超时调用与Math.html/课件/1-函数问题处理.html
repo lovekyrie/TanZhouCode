@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>函数问题处理</title>
+	<link rel="stylesheet" href="">
+	<style>
+		#box{
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+
+	<script>
+		var oBox=document.getElementById("box");
+
+		oBox.onclick=function(){
+			at(2,3);
+		};
+
+		function at(a,b){
+			alert(a+b);
+		}
+
+
+	</script>
+</body>
+</html>

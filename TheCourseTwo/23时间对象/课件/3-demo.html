@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>demo1</title>
+	<link rel="stylesheet" href="">
+	<style>
+		#box{
+			margin-top: 50px;
+			text-align: center;
+			line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">1</div>
+	
+	<script>
+		
+		var oBox=document.getElementById("box");
+		time();
+
+		setInterval(time,1000);
+
+		function time() {
+			// 得到当前时间
+			var time=new Date();
+			var year=time.getFullYear();
+			var month=time.getMonth()+1;
+			var day=time.getDate();
+			var hour=time.getHours();
+			var minute=time.getMinutes();
+			var second=time.getSeconds();
+
+			month=zero(month);
+			day=zero(day);
+			hour=zero(hour);
+			minute=zero(minute);
+			second=zero(second);
+
+			oBox.innerHTML=year+"年"+month+"月"+day+"日"+hour
+			+"时"+minute+"分"+second+"秒";
+		}
+
+		function zero(value){
+
+			value=value<10?"0"+value:value;
+			return value;
+		}
+	</script>
+</body>
+</html>

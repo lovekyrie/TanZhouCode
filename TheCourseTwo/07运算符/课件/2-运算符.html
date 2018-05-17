@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>运算符</title>
+</head>
+<body>
+	
+	<script>
+		/*
+			算数运算
+			+ - * /  %(取模 取余数)
+
+			隐式类型转换
+		*/
+
+		// +
+		var a=10;
+		var b=20;
+		var c="20";
+		var d="10";
+		console.log(a+b); //加法运算
+		console.log(a+c); //拼接
+		console.log(c+d); //拼接
+		console.log(a>c); //转换运算
+
+		// -
+		console.log(a-b); //减法运算
+		console.log(a-c); //进行类型转换，把字符串转变成了数字，再进行减法运算
+		console.log(c-d); //
+
+		// *
+		console.log(a*b); //乘法运算
+		console.log(a*c); //
+
+		// /
+		console.log(a/b);
+		console.log(a/d);
+
+		// %
+		console.log(a%b); //10
+		console.log(b%a); //0
+	</script>
+</body>
+</html>

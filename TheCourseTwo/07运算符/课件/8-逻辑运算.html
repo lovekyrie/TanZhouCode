@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>逻辑运算</title>
+</head>
+<body>
+	<button>开</button>
+	<script>
+		/*
+			与： && 都为真则为真,所有的条件都必须满足
+			或：|| 其中的任意一个满足，则为真
+			非： !
+		*/
+
+		var a=10;
+	/*	if(a && isNaN(a)){
+			alert(a);
+		}
+		else{
+			alert("mmp");
+		}
+
+		if(a || isNaN(a)){
+			alert(a);
+		}
+		else{
+			alert("mmp");
+		}*/
+
+		var oBtn=document.getElementsByTagName("button")[0];
+		var onOff=true;
+		oBtn.onclick=function(){
+
+			this.innerHTML=onOff?"关":"开";
+			onOff=!onOff;
+		}
+
+	</script>
+</body>
+</html>

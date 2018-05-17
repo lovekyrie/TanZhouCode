@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>正则断言</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+			Regular Expression Assertions 正则表达式断言 ==>截取边界
+			^ Start of string	字符串的开始
+			$ End of string		字符串的结束
+			\b Word boundary
+			\B Non-word boundary
+			(?=...) Positive lookahead
+			(?!...) Negative lookahead
+		*/
+
+		var  str="abcd1234dcba";
+		var res1=str.match(/[^\d]+/g);
+		var res2=str.match(/^\d+/g);
+		console.log(res1);
+		console.log(res2);
+
+		var res1=str.match(/[^\d]+/g);
+		var res2=str.match(/\d+$/g);
+		console.log(res1);
+		console.log(res2);
+
+		var  reg=/\bhe\B/;
+		var str1="i love he";
+		var str2="i love hello";
+		var str3="i love hex";
+		var res1=str1.match(reg);
+		var res2=str2.match(reg);
+		var res3=str3.match(reg);
+
+		console.log(res1);
+		console.log(res2);
+		console.log(res3);
+	</script>
+</body>
+</html>

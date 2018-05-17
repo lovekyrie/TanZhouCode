@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>数组的迭代方法</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+		接受两个参数	
+			第一个参数：函数
+				函数接受3个参数
+					第一个:数组每一项的值
+					第二个：数组的下标
+					第三个：数组本身
+			第二个参数：obj==>改变 this 指向
+			some：数组中的某一些满足就是true
+			every:数组中的每一项满足 就是true
+			filter:过滤出满足条件的项，返回新数组
+			forEach:执行函数，没有返回值
+			map:对每一项进行处理，返回新数组
+
+			以上方法伪数组无法使用
+
+		reduce
+		reduceRight 与reduce反向
+			如果没有默认值，数组的第一项作为默认值，不列入再次计算过程
+		*/
+		var arr=[1,2,3,4,5,6];
+
+		var res=arr.some(function(value,index,arr){
+			return value>2;
+		});
+
+		console.log(res);	
+
+		var resEvery=arr.every(function(value,index,arr){
+			return value>2;
+		});
+		console.log(resEvery);
+
+		var resFilter=arr.filter(function(value,index,arr){
+			return value>2;
+		});
+		console.log(resFilter);
+
+		// [],null ==0
+		// null-0=0
+		// null==0 false
+		var arrOne=[-1,2,-5,"32","11",[],null,undefined];
+		var resultTransfer=arrOne.filter(function(value,index,arr){
+			return value>-1;
+		});
+		console.log(resultTransfer);
+
+		console.log([]==0);
+		console.log(Number(null));
+
+		var resMap=arr.map(function(value,index,arr){
+			return value*2;
+		});
+		console.log(resMap);
+
+		// 就是for循环
+		var resForeach=arr.forEach(function(value,index,arr){
+			console.log(value);
+		});
+		console.log(resForeach);
+
+		// 
+		var arr2=[1,2,3,4,5];
+		var resReduce=arr2.reduce(function(prev,next,index,arr){
+			console.log(index);
+			return prev+next;
+		},50);
+		console.log(resReduce);
+	</script>
+</body>
+</html>

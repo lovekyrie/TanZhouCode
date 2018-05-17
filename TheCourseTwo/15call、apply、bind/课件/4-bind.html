@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>bind</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var obj={
+			"name":"哈哈"
+		};
+
+		var obj1={
+			"name":"鬼才"
+		};
+
+		var name="嘻嘻";
+		// 函数表达式 匿名函数使用bind
+		var fn= function (){
+			console.log(arguments);
+			console.log(this.name);
+		}.bind(obj);
+
+		fn();
+
+		// 使用有名函数的时候 需要两个括号 一个是bind的 一个是函数执行的(调用函数)
+		function fn(){
+			console.log(arguments);
+			console.log(this.name);
+		};
+
+		console.log(fn);
+		console.log(fn.bind(obj));
+		fn.bind(obj)();
+
+		// 自执行
+		(function fn2(){
+			console.log(arguments);
+			console.log(this.name);
+		}.bind(obj))();
+
+		(function fn3(){
+			console.log(arguments);
+			console.log(this.name);
+		}.bind(obj)());
+
+		(function fn4(){
+			console.log(arguments);
+			console.log(this.name);
+		}).bind(obj1)(1);
+	</script>
+</body>
+</html>

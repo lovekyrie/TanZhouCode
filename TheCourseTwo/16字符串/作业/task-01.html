@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>16作业1</title>
+    <link rel="stylesheet" href="">
+    <style>
+    	#box{
+    		margin: 50px auto 0;
+    		width: 520px;
+    		height: 400px;
+
+    	}
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div class="header">
+            <input id="searchKey" type="text">
+            <input id="replaceValue" type="text">
+            <button id="search">查找</button>
+            <button id="replace">替换</button>
+        </div>
+
+        <div class="container">
+        	<p>
+        		[行程特色]张家界国家森林公园，与一脉相连的索溪峪、天子山两大自然保护区组成武陵源，是张家界的核心景区。
+        		张家界，奇峰三千，秀水八百，张家界的山大多是拔地而起山，山上峰峻石奇，或玲珑秀丽，或峥嵘可怖，
+        		或平展...
+        	</p>
+        </div>
+    </div>
+    <script>
+    		/*
+    			实现字符串的查找，替换功能
+    		*/
+    		var oSerach=document.getElementById("search");
+    		var oReplace=document.getElementById("replace");
+
+    		var searchHtml=document.getElementById("searchKey");
+    		var replaceHtml=document.getElementById("replaceValue");
+    		
+    		var text =document.querySelectorAll("div p")[0];
+    		
+    		oSerach.onclick=function(){
+
+    			var textStr=text.innerText;
+    			var txt=searchHtml.value.trim();
+    			if(txt){
+    				textStr.indexOf(txt)>-1?
+    				text.innerHTML=textStr.split(txt).join("<span style='color:red;font-weight:900;'>"+txt+"</span>")
+    				:alert("没有找到值");
+    			}
+    			else{
+    				alert("请输入内容");
+    			}
+    		}
+    		
+    		oReplace.onclick=function(){
+    			
+    			var textStr=text.innerText;
+				var txt=searchHtml.value.trim();
+				var repalceTxt=replaceHtml.value.trim();
+    			if(txt){
+    				textStr.indexOf(txt)>-1?
+    				text.innerHTML=textStr.split(txt).join("<span style='color:red;font-weight:900;'>"+repalceTxt+"</span>")
+    				:alert("没有找到值");
+    			}
+    			else{
+    				alert("请输入内容");
+    			}
+    		}
+    </script>
+</body>
+
+</html>

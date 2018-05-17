@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绝对定位</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		.box{
+			margin: 100px;
+			width: 308px;
+			height: 196px;
+			border: 1px solid #D33333;
+			position: relative; /* 子绝父相 */
+		}
+
+		.box .image{
+			height: 196px;
+			background: url("http://img.smyhvae.com/20180116_1116.jpg");
+			background-size: contain; /*不支持进background的缩写，如果是数字可以*/
+		}
+		
+		span.upon{
+			display: block;
+			width: 50px;
+			height: 28px;
+			background:url("http://img.smyhvae.com/20180116_1115.png") -108px 0px;
+			position: absolute;
+			top: -9px;
+			left: 13px;
+		}
+
+		.box h4{
+			background-color: #000;
+			color: #fff;
+			width: 308px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			position: absolute;
+			top: 156px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<span class="upon"></span>
+		<div class="image">
+			<!-- <img src="http://img.smyhvae.com/20180116_1116.jpg" alt=""> -->
+			<h4>广东深圳宝安区建安一路海雅缤纷城4楼</h4>
+		</div>
+		
+	</div>
+	
+</body>
+</html>

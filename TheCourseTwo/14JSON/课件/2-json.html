@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>json</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+	<script>
+		/*
+			JSON：数据格式
+			类型是Object
+		*/
+
+		var obj1={
+			"name":"嘻嘻",
+			"sex":"女"
+		};
+
+		// 字面量
+		console.log(obj1);
+		// 读取数据
+		console.log(obj1["name"]);
+		console.log(obj1.age); //undefined
+
+		// 写入数据 添加一条数据
+		obj1.age="18";
+		console.log(obj1);
+		console.log(obj1.age);
+
+		// 修改数据
+		obj1.name="哈哈";
+		console.log(obj1);
+
+		var obj2=new Object({"name":"xixi"});
+		console.log(obj2);
+
+		var obj3=new Object("name");
+		var str="name";
+		console.log(obj3===str);
+
+		var obj4=Object.create({"name":"嘻哈"});
+		console.log(obj4);
+		console.log(obj4.name);
+
+	</script>
+</body>
+</html>

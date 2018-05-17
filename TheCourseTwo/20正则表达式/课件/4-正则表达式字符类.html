@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>正则表达式字符类</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+			Regular Expression Character Classes
+			[ab-d] One character of:a,b,c,d
+			[^ab-d] One character except: a,b,c,d
+			[\b] Backspace character
+			\d One digit 一个数字
+			\D One non-digit	匹配一个非数字
+			\s One whitespace  匹配一个空格
+			\S One non-whitespace 匹配一个费空格
+			\w one word character 匹配一个字母，数字，_
+			\W one non-word character 匹配除了上面的情况
+		*/
+
+		var str="12 34-ab cdE";
+
+		var res=str.match(/[ab-d]/g);
+		console.log(res);
+
+		var res=str.match(/[^a-zA-Z]/g);
+		console.log(res);
+
+		var res=str.match(/[^0-9E]/g);
+		console.log(res);
+
+		// \转义符号
+		var res=str.match(/\d+/g);
+		console.log(res);
+
+		var res=str.match(/\D+/g);
+		console.log(res);
+
+		var res=str.match(/\s+/g);
+		console.log(res);
+
+		var res=str.match(/\S+/g);
+		console.log(res);
+
+		var strDownline="12 34_ab cdE";
+		var res=str.match(/\w+/g);
+		var resDownline=strDownline.match(/\w+/g);
+		console.log(res);
+		console.log(resDownline);
+
+		var res=str.match(/\W+/g);
+		console.log(res);
+	</script>
+</body>
+</html>

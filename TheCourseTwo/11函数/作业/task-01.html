@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>11作业01</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    #box {
+        margin: 50px auto 0;
+        width: 880px;
+        border-bottom: 1px solid #930;
+        border-right: 1px solid #930;
+    }
+
+    .header {
+        display: flex;
+        width: 100%;
+        line-height: 35px;
+        background-color: #CC3366;
+    }
+
+    .header li {
+        width: 220px;
+        border: 1px solid #930;
+
+        text-align: center;
+        border-bottom: none;
+        border-right: none;
+    }
+
+    .list {
+        display: flex;
+    }
+
+    .list li {
+        position: relative;
+        display: inline-block;
+        width: 220px;
+        height: 165px;
+        line-height: 160px;
+        background-color: #fff;
+        font-size: 14px;
+        text-align: center;
+        justify-content: center;
+        border: 1px solid #930;
+        border-bottom: none;
+        border-right: none;
+    }
+
+    .list li img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 160px;
+    }
+
+    .list li a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid #ccc;
+        background-color: #ccc;
+        text-decoration: none;
+    }
+
+    .list li span {
+        display: inline-block;
+        width: 40px;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid #ccc;
+    }
+
+    .list li:nth-child(3n) {
+        font-size: 0;
+    }
+
+    .total {
+    	  margin: 10px auto 0;
+    	width: 880px;
+        height: 35px;
+        line-height: 35px;
+        background-color: #CC3366;
+        text-align: right;
+    }
+
+    .total span {
+        margin-right: 80px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul class="header">
+            <li>商品</li>
+            <li>单价</li>
+            <li>数量</li>
+            <li>小计</li>
+        </ul>
+        <ul class="list">
+            <li><img src="images/shop1.jpg" alt=""></li>
+            <li class="item-price">8</li>
+            <li class="count">
+                <a href="#" class="decrease">-</a>
+                <span>0</span>
+                <a href="#" class="increase">+</a>
+            </li>
+            <li class="item-total">
+                0元
+            </li>
+        </ul>
+        <ul class="list">
+            <li><img src="images/shop2.jpg" alt=""></li>
+            <li class="item-price">10</li>
+            <li class="count">
+                <a href="#" class="decrease">-</a>
+                <span>0</span>
+                <a href="#" class="increase">+</a>
+            </li>
+            <li class="item-total">
+                0元
+            </li>
+        </ul>
+        <ul class="list">
+            <li><img src="images/shop3.jpg" alt=""></li>
+            <li class="item-price">12.5</li>
+            <li class="count">
+                <a href="#" class="decrease">-</a>
+                <span>0</span>
+                <a href="#" class="increase">+</a>
+            </li>
+            <li class="item-total">
+                0元
+            </li>
+        </ul>
+        <ul class="list">
+            <li><img src="images/shop4.jpg" alt=""></li>
+            <li class="item-price">23</li>
+            <li class="count">
+                <a href="#" class="decrease">-</a>
+                <span>0</span>
+                <a href="#" class="increase">+</a>
+            </li>
+            <li class="item-total">
+                0元
+            </li>
+        </ul>
+    </div>
+    <div class="total">
+        <span>已选中商品: 0件</span>
+        <span>合计费用: 0元</span>
+    </div>
+    <script>
+
+    	var aItemPrice=document.getElementsByClassName("item-price");
+    	var aCount=document.querySelectorAll(".count span");
+    	var aItemTotal=document.getElementsByClassName("item-total");
+
+    	var aIncrease=document.getElementsByClassName("increase");
+    	var aDecrease=document.getElementsByClassName("decrease");
+
+    	var oTotal=document.getElementsByClassName("total")[0];
+
+    	changeNum(aIncrease);
+    	changeNum(aDecrease);
+
+    	// console.log(aItemPrice,aCount,aItemTotal,aIncrease,aDecrease);
+    	function changeNum(obj){
+    		// 传递进来按了+还是-的这个对象
+    		for (var i = 0; i < obj.length; i++) {
+    			obj[i].index=i;
+    			obj[i].onclick=function(){
+    				// 定义每行初始商品数量，和总价
+    				var allTotal=0;
+    				var allCount=0;
+
+    				if(obj==aIncrease){
+    					aCount[this.index].innerHTML++;
+    				}
+    				else{
+    					aCount[this.index].innerHTML==0?
+    					0:
+    					aCount[this.index].innerHTML--;
+    				}
+
+    				// 计算价格
+    				aItemTotal[this.index].innerHTML=(aItemPrice[this.index].innerHTML *aCount[this.index].innerHTML).toFixed(2)+"元";
+
+    				for (var j = 0; j < aItemTotal.length; j++) {
+    					allCount+=parseFloat(aCount[j].innerHTML);
+    					allTotal+=parseFloat(aItemTotal[j].innerHTML);
+    				}
+
+    				oTotal.innerHTML="<span>选中的商品:"+allCount+"件</span><span>合计费用:"+allTotal.toFixed(2)+"元</span>";
+
+    			}	
+    		}
+    	}
+    </script>
+</body>
+
+</html>

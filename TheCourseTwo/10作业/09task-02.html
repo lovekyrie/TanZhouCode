@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>09作业2</title>
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    #box {
+        width: 400px;
+        margin: 50px auto 0;
+    }
+    /* 左侧的导航 */
+
+    .list {
+        float: left;
+    }
+    /*不需要边框*/
+
+    .list li {
+        width: 98px;
+        line-height: 30px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .list li+li {
+        margin-top: 2px;
+    }
+    /* 图片 */
+
+    .banner {
+        float: right;
+        position: relative;
+        width: 300px;
+        height: 200px;
+        display: none;
+    }
+
+    .banner .img li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner .btn {
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+    }
+
+    .banner .btn li {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        margin-right: 2px;
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul class="list">
+            <li>图库1</li>
+            <li>图库2</li>
+            <li>图库3</li>
+        </ul>
+        <div class="banner">
+            <ul class="img img1">
+                <li><img src="images/1.jpg" alt=""></li>
+                <li><img src="images/2.jpg" alt=""></li>
+                <li><img src="images/3.jpg" alt=""></li>
+                <li><img src="images/4.jpg" alt=""></li>
+            </ul>
+            <ul class="btn">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+          <div class="banner">
+            <ul class="img img2">
+                <li><img src="images/m1.jpg" alt=""></li>
+                <li><img src="images/m2.jpg" alt=""></li>
+                <li><img src="images/m3.jpg" alt=""></li>
+                <li><img src="images/m4.jpg" alt=""></li>
+                <li><img src="images/m5.jpg" alt=""></li>
+            </ul>
+            <ul class="btn">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+          <div class="banner">
+            <ul class="img img3">
+                <li><img src="images/s1.jpg" alt=""></li>
+                <li><img src="images/s2.jpg" alt=""></li>
+                <li><img src="images/s3.jpg" alt=""></li>
+                <li><img src="images/s4.jpg" alt=""></li>
+                <li><img src="images/s5.jpg" alt=""></li>
+            </ul>
+            <ul class="btn">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+    var aLists = document.querySelectorAll(".list li");
+    var aImgs = document.querySelectorAll(".img li");
+    var aImgs1=document.querySelectorAll(".img1 li");
+    var aImgs2=document.querySelectorAll(".img2 li");
+    var aImgs3=document.querySelectorAll(".img3 li");
+    var aBtns = document.querySelectorAll(".btn li");
+    var aBanners=document.getElementsByClassName("banner");
+
+    aLists[0].style.backgroundColor = "#F90";
+    aImgs[0].style.display = "block";
+    aBtns[0].style.backgroundColor = "#F60";
+    aBanners[0].style.display="block";
+
+    // 创建一个二维数组
+    var array=new Array();
+    for(var i=0;i<aLists.length;i++){
+    	array[i]=new Array();
+    	if(i==0){
+    		for(var j=0;j<aImgs1.length;j++){
+    			array[i][j]=aImgs1[j];
+    		}
+    	}
+		if(i==1){
+			for(var k=0;k<aImgs2.length;k++){
+				array[i][k]=aImgs2[k];
+			}
+		}    	
+		if(i==2){
+			for(var l=0;l<aImgs3.length;l++){
+				array[i][l]=aImgs3[l];
+			}
+		}
+    }
+
+    for (var i = 0; i < aBtns.length; i++) {
+
+        // 每个按钮的点击事件
+        aBtns[i].index=i;
+        aBtns[i].onclick = function() {
+
+            for (var j = 0; j < aImgs.length; j++) {
+                aBtns[j].style.backgroundColor="#000";
+                aImgs[j].style.display="none";
+            }
+
+            this.style.backgroundColor="#F60";
+            aImgs[this.index].style.display="block";
+        }
+    }
+
+    for (var i = 0; i < aLists.length; i++) {
+
+    	aLists[i].index=i;
+    	aLists[i].onclick=function(){
+    		for(var j=0;j<aBanners.length;j++){
+    			aLists[j].style.backgroundColor="#000";
+    			aBanners[j].style.display="none";
+    		}
+
+    		this.style.backgroundColor="#F90";
+    		aBanners[this.index].style.display="block";
+    		array[this.index][0].style.display="block";
+    	}
+    }
+    </script>
+</body>
+
+</html>

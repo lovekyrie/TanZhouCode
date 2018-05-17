@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Date方法</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var time=new Date();
+		//getTime() 返回一个毫秒数 1970.1.1
+
+		var ms=time.getTime();
+		console.log(ms);
+
+		//getFullYear() getYear() 118
+		var year=time.getFullYear();
+		console.log(year);
+
+		//getMonth
+		var month=time.getMonth();
+		console.log(month); // 0-11 12个月
+
+		//getDate() getDay()
+		var date=time.getDate();
+		console.log(date);
+
+		//getDay() 获取星期几 0-6 0=>星期天 6=>星期六
+		var day=time.getDay();
+		console.log(day);
+
+		//getHours()
+		var hours=time.getHours();
+		console.log(hours);
+
+		//getMinutes()
+		var minutes=time.getMinutes();
+		console.log(minutes);
+
+		//getSeconds()
+		var seconds=time.getSeconds();
+		console.log(seconds);
+
+		//getMilliseconds() 毫秒
+		var milliSeconds=time.getMilliseconds();
+		console.log(milliSeconds);
+	</script>
+</body>
+</html>

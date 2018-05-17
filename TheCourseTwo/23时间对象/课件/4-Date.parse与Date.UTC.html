@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Data.parse与Date.UTC</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+	<script>
+		/*
+			Data.parse
+				接收表示日期的字符串参数
+
+			Date.parse
+				传递参数的月份 必须从1开始
+				月/日/年
+				英文月份,日,年
+
+			Date.UTC
+				传递参数的月份 必须从0开始
+				这个接收的参数不是字符窜
+				年,月,日,时,分,秒,毫秒
+
+		*/
+
+		var time1=Date.parse("8/22/2017");
+		console.log(time1); //得到一个时间戳
+		var time2=Date.parse("May,14,2019");
+		console.log(time2);
+
+		//new Date本身接收的参数是一个毫秒数
+		//传递字符串是先调用了Date.parse方法
+		var time3=new Date("12/22/2017");
+		console.log(time3);
+
+		//月份从0开始 至少两个参数
+		var time4=Date.UTC(2019,0,1,0,0,0);
+		console.log(time4);
+
+		var time5=new Date(time4);
+		console.log(time5);
+
+	</script>
+</body>
+</html>

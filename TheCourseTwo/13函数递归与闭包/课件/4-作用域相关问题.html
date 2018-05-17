@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作用域相关问题</title>
+</head>
+<body>
+	
+	<script>
+		
+		var obj={
+			"a":1,
+			"b":function(){
+				console.log(this.a);
+			}
+		}
+
+		console.log(obj.b);
+		console.log(obj.b());
+
+		var obj2={
+			"a":3
+		}
+
+		obj2.b=obj.b;
+		console.log(obj2.b);
+		console.log(obj2.b());
+
+		function intro(){
+			console.log('名字是:'+this.name,this);
+		}
+
+		var dog={name:"狗"};
+		dog.intro=intro;
+		dog.intro();
+
+		var cat={name:"猫"};
+		cat.intro=intro;
+		cat.intro();
+
+		// cat.intro=dog.intro 返回的是=右边的值
+		(cat.intro=dog.intro)();
+	</script>
+</body>
+</html> 

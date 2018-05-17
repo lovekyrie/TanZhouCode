@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变量自增</title>
+</head>
+<body>
+	<script>
+		/*
+			i++ ++i
+			i-- --i
+
+			如果执行 ++或者 --的时候，不存在赋值，就是简单的自增1 或自减一
+
+			如果存在赋值
+				前加或者是前减，先自增再赋值
+				后加或者后减，先赋值在自增
+				两者只会影响被赋值的这个变量
+		*/
+
+		var a=1;
+		a++;
+		console.log(a);
+		console.log("------------");
+
+		var a=1;
+		++a;
+		console.log(a);
+		console.log("-------------");
+
+		var b=1;
+		var c=b++;
+		console.log("b:"+b);
+		console.log("c:"+c);
+
+		var b=1;
+		var c=++b;
+		console.log("b:"+b);
+		console.log("c:"+c);
+	</script>_
+</body>
+</html>

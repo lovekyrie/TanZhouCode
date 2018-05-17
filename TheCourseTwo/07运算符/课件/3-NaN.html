@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NaN</title>
+</head>
+<body>
+	
+	<script>
+		
+		var a=10;
+		var b="20";
+		var c="xixi";
+
+		console.log(a+b); //1020
+		console.log(a+c); //10xixi
+
+		console.log(a-b); //-10
+		console.log(a-c); //NaN(not a number) c不能转换成数字
+		// 不是一个数字，但是数据类型是number，NaN不同于任何的东西，包括它自己
+
+		console.log(typeof(a-c));
+		console.log(NaN===NaN);
+		console.log(NaN==10);
+
+		// 使用isNaN()判断 是不是NaN
+		// 不是数字 ==> true 否则返回 false
+		var d=a-c;
+		console.log(isNaN(d));
+		console.log(isNaN(a));
+
+		console.log(isNaN(true));
+	</script>
+</body>
+</html>

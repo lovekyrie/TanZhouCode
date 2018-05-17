@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>关于列队</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+			js 单线程
+				一次只能做一件事
+			同步：js 弹窗 阻塞线程运行
+	
+			异步：把一些事件加入到队列，在其他的代码执行完了在执行
+				定时器
+				ajax
+				图片 onload
+				时间绑定
+
+			1.整个页面加载
+			2.处理列队里面的东西
+
+			同步会阻塞
+			异步不会
+		*/
+
+		for(var i=0;i<10;i++){
+			(function(i){
+				setTimeout(function(){
+					alert(i);
+					console.log("i"+i);
+				},100);
+			}(i))
+		}
+
+		for (var j = 0; j < 200; j++) {
+			console.log("j"+j);	
+		}
+
+	</script>
+</body>
+</html>

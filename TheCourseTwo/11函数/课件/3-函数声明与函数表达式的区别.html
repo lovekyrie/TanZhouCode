@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数声明与函数表达式的区别</title>
+</head>
+<body>
+	
+	<script>
+		/*
+			函数声明会自动提升函数变量的优先级
+		*/
+
+		//函数声明
+		function fn1(){
+			console.log("函数声明 fn1");
+		}
+		// 调用函数写在声明下面
+		fn1();
+
+		// 调用函数写在声明上面
+		fn2();
+		function fn2(){
+			console.log("函数声明 fn2");
+		}
+
+		// 函数表达式
+		var fn3=function(){
+			console.log("函数声明 fn3");
+		}
+		// 调用函数写在表达式下面
+		fn3();
+
+		// 调用函数写在表达式上面 出错
+		f4();
+		var fn4=function(){
+			console.log("函数声明 fn4");
+		};
+
+		(function fn5(){
+			console.log("函数声明 fn5");
+		})();
+		//函数自执行是没有办法调用的 原因作用域 
+		// fn5();
+
+		// 当用boolean判断执行那个函数方法是不能用 函数声明 IE9就会报错
+		// 但是可以用函数表达式
+		var bool=true;
+		if(bool){
+			function a(){
+				alert(1);
+			}
+		}
+		else{
+			function a(){
+				alert(2);
+			}
+		}
+		a();
+
+		var boolExpression=true;
+		if(boolExpression){
+			var b=function(){
+				alert(3);
+			}
+		}
+		else{
+			var b=function(){
+				alert(4);
+			}
+		}
+		b();
+
+	</script>
+</body>
+</html>

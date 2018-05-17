@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box1 {
+        width: 300px;
+        height: 300px;
+        border: 5px solid red;
+        position: relative;
+    }
+
+    .box2 {
+        position: absolute;
+        left: 40px;
+        top: 40px;
+        background-color: orange;
+        width: 100px;
+        height: 100px;
+    }
+
+    .box3 {
+        margin-top: 100px;
+        width: 300px;
+        height: 300px;
+        border: 5px solid red;
+    }
+
+    .box4 {
+    	margin-left: 40px;
+    	margin-top: 40px;
+        background-color: orange;
+        width: 100px;
+        height: 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 相对定位做法 -->
+    <div class="box1">
+        <div class="box2">
+        </div>
+    </div>
+    <!-- margin做法 -->
+    <div class="box3">
+        <div class="box4">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>字体属性简写-复合写法</title>
+	<link rel="stylesheet" href="">
+	<style>
+	/*<' font-style '> || <' font-variant '> || <' font-weight '> ]? <' font-size '> [ / <' line-height '> ]? <' font-family '> */
+	/*font-size 跟font-family不可省略*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		div{
+			border: 1px solid #AA9A9A;
+			/*复合基本写法 */
+			font:50px 'Microsoft Yahei';
+			
+			/*注：字体大小跟行高不能写在前面 就是紧跟在font后面*/
+			font:bold italic small-caps 30px/100px '宋体';
+		}
+	</style>
+</head>
+<body>
+	<div>
+		木马木马我爱你，就像老鼠爱大米 mumawoaini
+	</div>
+</body>
+</html>

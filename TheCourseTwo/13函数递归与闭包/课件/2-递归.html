@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>递归</title>
+</head>
+<body>
+	
+	<script>
+		/*
+			递归：函数自己调用自己
+			实现一个阶层运算
+				5！=5*4*3*2*1
+		*/
+
+		/*
+			递归运算的时候，之前返回的值 变量 等都会存放在内存中
+
+			arguments.callee 执行函数自身 注意严格模式
+			不到万不得已不要使用递归 效率低
+		*/
+		console.time(1);
+		function factorial(n){
+			if(n<=0){
+				return 1; 
+			}
+			else{
+				return n* factorial(n-1);
+			}
+		}
+
+		console.log(factorial(5));
+		console.timeEnd(1);
+
+		/*
+			for循环实现阶乘运算
+		*/
+		console.time(2);
+		var n=1;
+		for (var i = 1; i < 6; i++) {
+			n *=i;
+		}
+		console.log(n);
+		console.timeEnd(2);
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取样式</title>
+
+	<style>
+		#box{
+			width: 200px;
+			height: 200px;
+			background-color: #153CAB;
+			border: 10px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+
+	<script>
+		var oBox=document.getElementById("box");
+
+		// oBox.sytle.width 只能获取 或者是修改 行内样式
+		console.log(oBox.style.width);
+		console.log(oBox.style.height);
+
+		// 通过 getComputedStyle()方法获取CSS标签，外链样式
+		// console.log(getComputedStyle(oBox).width);
+		// console.log(getComputedStyle(oBox).height);
+
+		console.log(getStyle(oBox,"width"));
+		// obj.name
+		// obj[name]
+
+		function getStyle(obj,attr){
+			return window.getComputedStyle?
+			getComputedStyle(obj)[attr]:
+			obj.currentStyle[attr];
+		}
+	</script>
+</body>
+</html>

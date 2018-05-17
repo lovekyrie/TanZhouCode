@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数自执行</title>
+</head>
+<body>
+	
+	<script>
+		/*
+			函数自执行末尾必须加;
+			函数加括号自执行	
+
+			使用特殊的符号
+				+ - ~ !(英文状态下)
+		*/
+
+		function fn1(){
+			console.log("函数声明 fn1");
+		}
+
+		//加括号
+		fn1();
+		(function fn2(){
+			console.log("函数声明 fn2");
+		})();
+
+		//JsLint(插件) 推荐使用
+		(function fn3(){
+			console.log("函数声明 fn3");
+		}());
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>数组的方法</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+			添加与删除
+			在数组最后：  添加
+				push()		 push()
+				pop()		 unshift()
+			在数组前面:   删除
+				unshift()    pop()
+				shift()		 shift()
+			删除指定的下标
+				splice()
+				第一个参数：从第几位开始找
+				第二个参数:删除几项
+				第三个参数：添加的项
+							
+		*/
+		var arr=["red","green","blue"];
+		arr[arr.length]="pink";
+		console.log(arr);
+
+		// 往数组后面添加 LIFO 返回新数组的长度
+		var res=arr.push("purple","orange");
+		console.log(arr);
+		console.log(res);
+
+		// 删除数组的最后一项 返回删除的这一项
+		var resPop=arr.pop();
+		console.log(arr);
+		console.log(resPop);
+
+		// 往数组前面添加 返回新数组的长度
+		var resUnshift=arr.unshift("black","yellow");
+		console.log(arr);
+		console.log(resUnshift);
+
+		var resShift=arr.shift();
+		console.log(arr);
+		console.log(resShift);
+
+		// 返回删除的项
+		var resSplice=arr.splice(2,1);
+		console.log(arr);
+		console.log(resSplice);
+
+		// 在第二位的前面添加
+		var resAdd=arr.splice(2,0,"green");
+		console.log(resAdd);
+	</script>
+</body>
+</html>

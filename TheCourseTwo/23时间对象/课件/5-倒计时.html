@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>倒计时</title>
+    <link rel="stylesheet" href="">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="box">1</div>
+    <script>
+    /*
+    		实现距离2018-3-1还有多久时间
+    	*/
+
+    setInterval(CountDown,1000);
+
+    function CountDown() {
+        var futureTime = new Date(2018, 5, 8);
+        console.log(futureTime);
+
+        var today = new Date();
+        var diffMiSeconds = new Date(futureTime - today);
+        console.log(diffMiSeconds);
+
+        var diffDay = Math.floor(diffMiSeconds / 1000 / 60 / 60 / 24);
+        //除去天数剩余毫秒
+        var remainDaySeconds = diffMiSeconds % (1000 * 60 * 60 * 24);
+        var diffHour = Math.floor(remainDaySeconds / 1000 / 60 / 60);
+
+        //除去小时剩余毫秒
+        var remainHourSeconds = diffMiSeconds % (1000 * 60 * 60);
+        var diffMinute = Math.floor(remainHourSeconds / 1000 / 60);
+
+        //除去分钟剩余毫秒
+        var remainMinSeconds = diffMiSeconds % (1000 * 60);
+        var diffSecond = Math.floor(remainMinSeconds / 1000);
+
+        var oBox = document.getElementById('box');
+
+        oBox.innerHTML = '距离2018-6-8还剩' + diffDay + '天' + diffHour + '时' + diffMinute + '分' + diffSecond + '秒';
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>二级下拉菜单</title>
+
+    <style>
+    	*{
+    		margin: 0;
+    		padding: 0;
+    	}
+
+		ul:not(.sub){
+			border: 1px solid #000;
+			width: 198px;
+		}
+    	li{
+    		list-style: none;
+    		height: 35px;
+    		background-color: purple;
+    		color: #fff;
+    		line-height: 35px;
+    		text-indent: 5px;
+    		border-bottom: 1px dotted #ddd;
+    		overflow: hidden;
+    		transition: all 1s;
+    	}
+
+    	.sub li{
+    		background-color: #fff;
+    		color: #000;
+    		border-bottom: 1px dotted #ddd;
+    	}
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="father">同事
+            <ul class="sub">
+                <li>千寻</li>
+                <li>阿飞</li>
+                <li>风屿</li>
+                <li>踏浪</li>
+            </ul>
+        </li>
+        <li class="father">好友
+            <ul class="sub">
+                <li>嘻嘻</li>
+                <li>哈哈</li>
+                <li>乌拉</li>
+            </ul>
+        </li>
+        <li class="father">VIP
+            <ul class="sub">
+                <li>冬梅</li>
+                <li>洛风</li>
+                <li>Lance</li>
+                <li>Break</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+    	var aFathers=document.getElementsByClassName('father');
+    	var aSubs=document.getElementsByClassName('sub');
+
+    	for (var i = 0; i < aFathers.length; i++) {
+    		
+    		// 给每一个li里面添加一个属性 只不过 这是一个时间
+    		aFathers[i].i=i;
+    		aFathers[i].onclick=function(){
+    			// this就是你点击的哪一个li
+    			// alert(this.i);
+    			for (var j = 0; j < aFathers.length; j++) {
+    				aFathers[j].style.height='35px';
+    			}
+
+    			//设置为auto的时候不能 使用transition
+    			aFathers[this.i].style.height='140px';
+    		}
+    	}
+    </script>
+</body>
+	
+</html>

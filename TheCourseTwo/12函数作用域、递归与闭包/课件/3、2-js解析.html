@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js解析 函数声明</title>
+</head>
+<body>
+	
+	<script>
+		fn1();
+
+		function f1(){
+			console.log(1);
+		}
+		fn1();
+
+		// fn2();
+		var fn2=function(){
+			console.log(2);
+		}
+
+		fn2();
+
+		// 声明相同的变量会覆盖
+		function f3(){
+			console.log("第一个");
+		}
+
+		var fn3=function(){
+			console.log("第二个");
+		}
+
+		fn3(); //第二个
+	</script>
+</body>
+</html>

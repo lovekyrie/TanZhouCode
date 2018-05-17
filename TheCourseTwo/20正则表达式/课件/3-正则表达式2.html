@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>正则表达式量词</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+			Regular Expression Quantifiers 量词
+			* 0 or more
+			+ 1 or more
+			? 0 or 1
+			{2} Exactly 2
+			{2,5} Between 2 and 5
+			{2,} 2 or more
+
+			量词后面接量词 只能放？
+			量词默认是贪婪的，在后面加一个英文状态下的?变成不贪婪 这个?不再是量词了
+		*/
+		var  str="abcd-dbbca";
+		var res=str.match(/b*/g);
+		console.log(res);
+
+		var res=str.match(/b+/g);
+		console.log(res);
+
+		var strQus="abcc-dbca";
+		var res=strQus.match(/c?/g);
+		console.log(res);
+
+		var res=strQus.match(/c{2}/g);
+		console.log(res);
+
+		var strNotExactly="ccccccccccc";
+		var res=strNotExactly.match(/c{2,9}?/g);
+		console.log(res);
+
+		var res=strNotExactly.match(/c{2,}/g);
+		console.log(res);
+
+		// 问题？我始终按最多次匹配的
+		// 解决：在最后面放一个？
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示类型转换-ParseInt</title>
+</head>
+<body>
+	
+	<script>
+		// parseInt()方法：取整 
+		// 如果是小数，取小数点前面的部分
+		// 从字符串开始截取直到遇到不是数字的
+
+
+		var a=10;
+		var b="20";
+		var c="xixi";
+		var d="hh20";
+		var e=100.1;
+		var f="100.1";
+
+		//parseInt
+		console.log(parseInt(a));
+		console.log(parseInt(b));
+		console.log(parseInt(c)); //NaN
+		console.log(parseInt(d)); //20
+		console.log(parseInt(e)); //100
+		console.log(parseInt(f)); //100
+
+		// parseFloat 可以取小数
+
+		// 关于进制
+		var num=100;
+		console.log(parseInt(num,2)); // 0 1
+		console.log(parseInt(num,8)); // 0-7
+		console.log(parseInt(num,10));//0-9
+		console.log(parseInt(num,16)); //0-9,a-f
+
+	</script>
+</body>
+</html>

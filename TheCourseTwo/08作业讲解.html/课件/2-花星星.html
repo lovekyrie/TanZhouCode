@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>画星星</title>
+</head>
+
+<body>
+    <div id="box"></div>
+    <script>
+    var oBox = document.getElementById("box");
+
+    /*
+    	分析：
+    	1.显示的行数i表示[0,1,2,3,4,5,6] 7行
+    	2.在每一行花*号,使用j for循环 奇数增长 2n-1 2n+1
+    	3.画前面的- [6,5,4,3,2,1,0] 0不用管，相当于6行 使用k for循环
+    */
+    // 第一个
+    for (var i = 0; i <= 6; i++) {
+        for (var k = 0; k < 6 - i; k++) {
+            oBox.innerHTML += "-";
+        }
+
+        for (var j = 0; j <= 2 * i; j++) {
+            oBox.innerHTML += "*";
+        }
+
+        oBox.innerHTML += "<br/>";
+    }
+
+    oBox.innerHTML += "<hr/>";
+
+    // 第二个
+    for (var i = 6; i >= 0; i--) {
+        for (var k = 0; k < 6 - i; k++) {
+            oBox.innerHTML += "-";
+        }
+
+        for (var j = 0; j <= 2 * i; j++) {
+            oBox.innerHTML += "*";
+        }
+
+        oBox.innerHTML += "<br/>";
+    }
+
+    oBox.innerHTML += "<hr/>";
+
+    // 第三个
+
+    for (var i = 0; i <= 6; i++) {
+        for (var k = 0; k < 6 - i; k++) {
+            oBox.innerHTML += "-";
+        }
+
+        for (var j = 0; j <= 2 * i; j++) {
+            if (j == 0 || j == i * 2) {
+                oBox.innerHTML += "*";
+            } else {
+                oBox.innerHTML += "-";
+            }
+
+        }
+
+        oBox.innerHTML += "<br/>";
+    }
+
+    for (var i = 5; i >= 0; i--) {
+        for (var k = 0; k < 6 - i; k++) {
+            oBox.innerHTML += "-";
+        }
+
+        for (var j = 0; j <= 2 * i; j++) {
+            if (j == 0 || j == i * 2) {
+                oBox.innerHTML += "*";
+            } else {
+                oBox.innerHTML += "-";
+            }
+        }
+
+        oBox.innerHTML += "<br/>";
+    }
+    </script>
+</body>
+
+</html>

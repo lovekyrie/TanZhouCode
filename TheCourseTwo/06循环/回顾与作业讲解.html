@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>回顾与作业讲解</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #box {
+        width: 400px;
+        height: 190px;
+        background-color: gray;
+        padding-top: 10px;
+    }
+
+    .user-input {
+        width: 380px;
+        height: 100px;
+        background-color: #fff;
+        margin: 0 auto;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <!-- content edit able 盒子可以插入东西 -->
+        <div class="user-input" contenteditable></div>
+        <div class="send">
+            <img src="" alt="">
+            <button>按钮</button>
+        </div>
+    </div>
+    <script>
+    var oImg = document.getElementsByTagName("img")[0];
+    var oBtn=document.getElementsByTagName("button")[0];
+    var oList=document.getElementsByTagName("ul")[0];
+    var oInput=document.getElementsClassName("user-input")[0];
+
+    // 路径 颜色 不能作为判断
+    var onOff = true;
+    oImg.onclick = function() {
+        //this.scr="img/YY.jpg";
+        if (true) {
+            this.src = "img/YY.jpg";
+            onOff = false;
+        } else {
+            this.src = "img/QQ.jpg";
+            onOff = true;
+        }
+    }
+
+    oBtn.onclick=function{
+    	var text=oInput.innerHTML;
+    	var src=oImg.scr;
+    	console.log(src);
+    	/*
+			字符串凭借
+				确定你要添加的地方
+				咔嚓两刀 +号连接，输入变量
+				引号里面嵌套引号，不能是相同的引号
+    	*/
+    	if(text){
+    		oList.innerHTML+="<li><img src'"+oImg.src+"'>"+text="</li>"
+    		oInput.innerHTML="";
+    	}
+    	
+    }
+    </script>
+</body>
+
+</html>

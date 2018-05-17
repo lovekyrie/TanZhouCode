@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>利用边框线绘制三角形</title>
+	<link rel="stylesheet" href="">
+	<style>
+		/* 利用讲左边和右边的边框线透明 来显示倒立的三角形 */
+		div{
+			width: 0;
+			height: 0;
+			border:200px solid #ccc;
+			border-top-color: #EC8787;
+			border-right-color: transparent;
+			border-bottom:none;
+			border-left-color: transparent;
+		}
+
+		/* 第二种方法，先全部隐藏边框线，然后显示上边框线的颜色 */
+		div{
+			width: 0;
+			height: 0;
+			border:200px solid transparent;
+			border-top-color: #550A0A;
+			border-bottom: none;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>回顾</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+			^
+			$
+			\b \B
+			(?=...) 积极前瞻 必须是括号里的
+			(?!...) 消极前瞻 必须不是括号里的
+
+			使用()的时候，那么括号里面的东西作为一个整体
+		*/
+
+		var str="1234567890";
+		var reg=/\d{1,3}(?=(\d{3})+$)/g;
+		var reg=str.replace(reg,function(){
+			console.log(arguments);
+		});
+		
+	</script>
+</body>
+</html>

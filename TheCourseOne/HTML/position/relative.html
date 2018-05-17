@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>相对定位</title>
+	<style>
+		/*作用
+			1、微调元素
+			2、做绝对定位的参考，子绝父相
+
+			相对定位定位值：
+			left:盒子右移
+			right:盒子左移
+			top:盒子下移
+			bottom:盒子上移
+			left:100px; <==>right:-100px; 这两种条件是相等的
+		*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+			font-size: 0;
+		}
+
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: #CCC;
+		}
+
+		.box2{
+			margin-left: 100px;
+			background-color: red;
+			position: relative;
+			bottom: 100px;
+			right: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		字体
+	</div>
+
+	<div class="box2">
+		
+	</div>
+</body>
+</html>

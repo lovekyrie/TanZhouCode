@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>九九乘法表</title>
+	<style>
+    span {
+        display: inline-block;
+        width: 100px;
+        line-height: 20px;
+        text-align: center;
+        border: 1px solid red;
+        margin-left: 1px;
+        margin-top: 1px;
+    }
+    </style>
+</head>
+<body>
+	<div id="box"></div>
+
+	<script>
+		/*
+			1.第一个乘数1-9使用for循环i打印
+			2.第二个乘数1-9使用for循环j打印
+			i j      <br>
+			1 123456789
+			2 123456789
+			...
+			3.添加span标签 包裹 并且进行乘法运算
+			4.前面多了一个数字(i),去掉他 注释
+			5.让i与j相等 修改j的取值范围 从j<10==>j<=i
+		*/
+
+		var oBox=document.getElementById("box");
+		// 第一个乘法表
+		for(var i=1;i<10;i++){
+			for(var j=1;j<=i;j++){
+				oBox.innerHTML+="<span>"+j+"*"+i+"="+j*i+"</span>";
+			}
+			oBox.innerHTML+="<br/>";
+		}
+	</script>
+</body>
+</html>

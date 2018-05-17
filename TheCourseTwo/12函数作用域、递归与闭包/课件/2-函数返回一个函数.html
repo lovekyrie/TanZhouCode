@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数返回一个函数</title>
+</head>
+<body>
+	
+	<script>
+		/*
+			函数的作用在函数定义的时候确定
+			函数的this是在函数调用的时候确定
+		*/
+		var json={};
+
+		json.fn1=function(){
+
+			console.log(this);
+			var that=this;
+
+			return function(){
+				console.log(this);
+				// 一个一个网上找
+				console.log(that);
+			}
+		}
+
+		var result=window.json.fn1();
+		console.log(window.json);
+		console.log(result);
+
+		// 因为在window下调用，所以result()函数的this指向window
+		result();
+	</script>
+</body>
+</html>

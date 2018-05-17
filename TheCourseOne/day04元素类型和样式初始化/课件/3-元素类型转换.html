@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>元素类型的转换</title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+			font-size: 30px;
+		}
+
+		span{
+			/*将元素转换为块级元素*/
+			display: block;
+			width: 300px;
+			height: 200px;
+			margin: 50px;
+			border:5px solid red;
+		}
+
+	</style>
+</head>
+<body>
+	<span>书包方走廊网回想刚买的书</span>
+	<script>
+		/*
+			1.display:none;
+			隐藏元素，而且DOM也会消失
+			2.display:block;
+			显示元素，而且会转化成块级元素
+			3.display:inline;
+			转换为行内元素
+			元素转换不会改变元素的性质(本质),即使行内元素display:block以后，也不能嵌套块级元素
+		*/
+	</script>
+</body>
+</html>

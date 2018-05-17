@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浮动特性2</title>
+	<style>
+
+		body{
+			font-size: 50px;
+		}
+		.box1{
+			float:left;
+			width: 100px;
+			height: 400px;
+			background-color: yellowgreen;
+		}
+
+		.box2{
+			float: left;
+			width: 100px;
+			height: 200px;
+			background-color: pink;
+		}
+
+		.box3{
+			float: left;
+			width: 200px;
+			height: 300px;
+			background-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<!-- 展示效果 如果3图有足够空间，会靠着第2图，如果没有足够空间，就会靠着1号大号。如果还要变窄，3号会自己去贴墙。
+	但是贴墙的时候，不会往1里面去贴，而是在1下面 -->
+	<div class="box1">1</div>
+	<div class="box2">2</div>
+	<div class="box3">3</div>
+</body>
+</html>

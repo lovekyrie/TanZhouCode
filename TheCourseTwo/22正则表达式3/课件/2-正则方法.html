@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>正则方法</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+			exec()
+				专门为捕获组设计的
+			test()
+				判断有没有 返回true或者 false
+		*/
+		 var str="你我他与她和它";
+		 var reg=/你我(他与(她和)它)/g;
+		 var res=reg.exec(str);
+
+		 //res2 不会把捕获组的内容匹配
+		 var res2=str.match(reg);
+		 console.log(res);
+		 console.log(res2);
+
+		 var str="1234mmmm";
+		 var reg=/\d{2,3}\w+/;
+		 var res=reg.test(str);
+		 console.log(res);
+	</script>
+</body>
+</html>

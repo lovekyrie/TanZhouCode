@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>随机数组</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+    /*
+    			作业：
+    				编写一个JavaScript函数fn,该函数有一个参数n(数字类型)。
+    				其返回值是一个数组，该数组内是n个随机且不重复的整数，
+    				且整数取值范围是[2,32]。
+
+    				法拉第
+    		*/
+
+    function fn(n) {
+        var arr = [];
+      	for (var i = 0; i < n; i++) {
+      		createArray();
+      	}
+      	function createArray(){
+      		var range=Math.random()*31+2;
+      		if(arr.indexOf(range)>-1){
+      			createArray();
+      		}
+      		else{
+      			arr.push(range);
+      		}
+      	}
+        return arr;
+ 
+	}
+
+	console.log(fn(1));
+    </script>
+</body>
+
+</html>

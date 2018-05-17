@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>超时调用</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+			setTimeout 一次性定时器 超时调用
+				第一个参数：函数 或者是 字符串
+				第二个参数： 时间 单位ms 
+							1000ms=1s
+							指的是 其它代码(正常加载的代码)执行完 隔多少时间调用这个函数
+							而不是执行这个函数用多少函数
+
+			clearTimeout 清除超时调用
+		*/
+		// setTimeout("alert(1)",1000);
+		/*setTimeout(function(){
+			alert(1);
+		},1000)*/
+
+		setTimeout(fn,1000);
+		function fn(){
+			alert(1);
+		}
+	</script>
+</body>
+</html>

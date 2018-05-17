@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>评分</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	
+		li{
+			list-style: none;
+		}
+		#box{
+			margin: 50px auto 0;
+			width: 300px;
+			overflow: hidden;
+			background-color: pink;	
+		}
+
+		#box span{
+			float: left;
+		}
+
+		ul li{
+			float: left;
+			width: 20px;
+			height: 20px;
+			background-image: url("star.png");
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="box">
+		<span>评分：</span>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<script>
+		/*
+			递归：
+				函数自己调用自己
+			闭包：
+				1.函数内部嵌套函数
+				2.颞部函数使用包含函数的变量或者参数
+
+			函数作用域：定义时确定
+			函数的this：在函数调用的时候确定
+		*/
+
+		var aLis=document.getElementsByTagName("li");
+
+		var num=0;
+		for (var i = 0; i < aLis.length; i++) {
+			aLis[i].index=i;
+			aLis[i].onmouseover=function(){
+				for (var j = 0; j < aLis.length; j++) {
+					if(j<=this.index){
+						aLis[j].style.backgroundPosition="bottom";
+					}
+					else{
+						aLis[j].style.backgroundPosition="top";
+					}
+				}
+			};
+
+			//闭包应用
+			(function(i){
+				aLis[i].onclick=function(){
+					this.style.backgroundPosition="bottom";
+					num=i;
+					console.log(num);
+				}
+			})(i);
+
+			aLis[i].onmouseout=function(){
+				for (var j = 0; j < aLis.length; j++) {
+					if(j<=num){
+						aLis[j].style.backgroundPosition="bottom";
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>

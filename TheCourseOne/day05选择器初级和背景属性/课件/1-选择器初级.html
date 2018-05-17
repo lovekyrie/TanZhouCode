@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>选择器初级</title>
+	<link rel="stylesheet" href="">
+	<style>
+		/*通配符选择器 选择页面中所有的元素*/
+		*{
+			margin: 0;
+			padding: 0;
+			font-size: 40px;
+		}
+		
+		/*元素选择器*/
+		a{
+			text-decoration: none;
+		}
+
+		ul{
+			list-style: none;
+		}
+
+		div{
+			background-color: red;
+			width: 300px;
+			height: 300px;
+		}
+		
+		div a{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		/*class选择器*/
+		/*以class属性给元素进行命名 用来代替元素选择器*/
+		.box{
+			background-color: blue;
+		}
+
+		/*ID选择器*/
+		/*以id属性给元素进行命名 用来代替元素选择器
+		id和class的区别
+		  
+		*/
+		#text{
+			background-color: pink;
+		}
+
+		.text-1{
+			background-color: #000;
+		}
+
+		ul li a{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class='box'><a href="#">亲爱的同学们</a></div>
+	<p id="text" class="text-1 text-2">大家晚上好</p>
+	<ul>
+		<li>我爱你们
+			<a href="">你们是最胖的</a>
+		</li>
+		
+		<li>牧马老师太帅了！！！</li>
+	</ul>
+	<div>我爱你们</div>
+
+	<script>
+		/*
+			HTML命名规范：
+				1.不能以数字开头 不能使用特殊符号@#￥%
+				2.以小写字母开头
+				3.不能使用中文
+				4.见名知意
+			行业内命名规范
+				1.可以加-或_
+				2.驼峰命名
+		*/
+	</script>
+</body>
+</html>

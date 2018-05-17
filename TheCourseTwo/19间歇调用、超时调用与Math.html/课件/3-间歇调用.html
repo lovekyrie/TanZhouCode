@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+    		/*
+    			setInterval 定时器 间歇调用
+    				第一个参数：函数 或者是 字符串
+    				第二个参数： 时间 单位ms
+    				1000ms=1s
+
+    			clearInterval:
+    				清除	
+    		*/
+	    var n = 0;
+	    var time1 = setInterval(function() {
+	        n++;
+	        console.log(1);
+	        if (n > 10) {
+	            clearInterval(time1);
+	        }
+	    }, 1000);
+
+	    var time2=setInterval(function(){
+	    	console.log('aaa');
+	    	if(n>10){
+	    		clearInterval(time2);
+	    		console.log(time2);
+	    	}
+	    },100);
+
+    </script>
+</body>
+
+</html>

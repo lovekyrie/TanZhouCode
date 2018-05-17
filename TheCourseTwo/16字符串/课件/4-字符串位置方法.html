@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>字符串位置方法</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+			字符串位置方法
+				查找字符串
+				indexOf
+				lastIndexOf
+
+				查找到了返回这个字符的下表
+				没有查找到 返回-1
+
+				对应的查找的第一个文字的下标
+
+				trim():去除字符串的首尾空格
+
+				大小写转换方法
+					toLowerCase()
+					toLocaleLowerCase()
+					toUpperCase()
+					toLocaleUpperCase()
+		*/
+		var str="你会挽着我的衣袖,我会把手揣在裤兜";
+
+		console.log(str.indexOf("我"));
+		console.log(str.indexOf("动"));
+
+		console.log(str.indexOf("我",5));
+
+		console.log(str.lastIndexOf("我"));
+		console.log(str.lastIndexOf("我",8));
+
+		var str1="男人哭吧哭吧不是罪";
+		console.log(str1.indexOf("哭吧"));
+		console.log(str1.lastIndexOf("哭吧"));
+
+		var str2="  男人哭吧哭吧不是罪   ";
+		console.log(str2);
+		console.log( str2.trim && str2.trim() || str2.replace(/\s*|\s*$/g,""));
+
+		var str3="Hello World!";
+		console.log(str3.toLowerCase());
+		console.log(str3.toLocaleLowerCase());
+		console.log(str3.toUpperCase());
+		console.log(str3.toLocaleUpperCase());
+		
+	</script>
+</body>
+</html>

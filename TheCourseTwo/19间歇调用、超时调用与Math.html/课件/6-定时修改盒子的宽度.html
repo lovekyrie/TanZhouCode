@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>定时修改盒子的宽度</title>
+	<link rel="stylesheet" href="">
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		#box{
+			display: inline-block;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">5</div>
+	<script>
+		var oBox=document.getElementById("box");
+		var n=parseInt(getStyle(oBox,"width"));
+		var speed=1;
+
+		var time1=setInterval(function(){
+			n+=speed;
+			if(n>600){
+				n=600;
+			}
+			oBox.style.width=n+"px";
+		},13);
+
+		function getStyle(obj,attr){
+			return window.getComputedStyle?window.getComputedStyle(obj)[attr]:
+				obj.currentStyle[attr];
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>06课作业1</title>
+    <style>
+    span {
+        display: inline-block;
+        width: 100px;
+        line-height: 20px;
+        text-align: center;
+        border: 1px solid red;
+        margin-left: 1px;
+        margin-top: 1px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <script>
+    for (var i = 1; i <= 9; i++) {
+        for (var j = 1; j <= i; j++) {
+            box.innerHTML += "<span>" + j + "*" + i + "=" + j * i + "</span>";
+        }
+
+        box.innerHTML += "<br/>";
+    }
+
+    box.innerHTML += "<hr/>";
+
+    for (var i = 9; i >= 1; i--) {
+        for (var j = 1; j <= i; j++) {
+            box.innerHTML += "<span>" + j + "*" + i + "=" + i * j + "</span>";
+        }
+
+        box.innerHTML += "<br/>";
+    }
+
+    box.innerHTML += "<hr/>";
+    for (var i = 1; i <= 9; i++) {
+        for (var j = i; j >= 1; j--) {
+            box.innerHTML += "<span>" + j + "*" + i + "=" + i * j + "</span>";
+        }
+
+        box.innerHTML += "<br/>";
+    }
+
+    box.innerHTML += "<hr/>";
+
+    for (var i = 9; i >= 1; i--) {
+        for (var j = i; j >= 1; j--) {
+            box.innerHTML += "<span>" + i + "*" + j + "=" + i * j + "</span>";
+        }
+        box.innerHTML+="<br/>";
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>文本样式</title>
+    <link rel="stylesheet" href="">
+    <style>
+    body {
+        font-size: 50px;
+    }
+
+    p {
+        width: 900px;
+        height: 300px;
+        border: 5px solid #EEE7E7;
+        color: red;
+        /*控制文本的大小写*/
+        text-transform: lowercase;
+        text-transform: uppercase;
+        text-transform: capitalize;
+        /*首字母大写*/
+        /*文本的对齐方式*/
+        text-align: left;
+        text-align: right;
+        text-align: center;
+        /*居中*/
+        text-align: justify;
+        /*两端对齐*/
+        /*首行缩进 px em*/
+        text-indent: 2em;
+
+        /*文本修饰*/
+        text-decoration: none;
+        /*取消下划线*/
+        text-decoration: underline;
+        /*下划线*/
+        text-decoration: line-through;
+        /*中划线*/
+        text-decoration: overline;
+        /*上划线*/
+        /*强制单词内换行*/
+    	word-break: break-all;
+    	/*强制不换行*/
+    	white-space: nowrap;
+    	/*文字溢出省略号*/
+    	text-overflow: ellipsis;
+    	/*溢出隐藏*/
+    	overflow: hidden;
+    }
+
+    div{
+    	color: #000;
+    	/*字间距*/
+    	letter-spacing: 40px;
+    	/*词间距*/
+    	word-spacing: 50px;
+
+    }
+
+    span{
+    	/*行内元素如果转变成块级元素 也能隐藏*/
+    	display: block;
+    	width: 300px;
+    	border: 5px solid blue;
+    	white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+    }
+    </style>
+</head>
+
+<body>
+    <p>
+    	My Name Is Muma I Love You 路飞，从小就立志成为海贼王的男人。
+    	My Name Is Muma I Love You 路飞，从小就立志成为海贼王的男人。sssssssssssssssssssssssssssss
+    </p>
+
+    <div>
+    	你们非要跟我拽英文是不是！
+    </div>
+
+    <span>常在河边走哪有不湿鞋常在河边走哪有不湿鞋常在河边走哪有不湿鞋常在河边走哪有不湿鞋</span>
+</body>
+
+</html>

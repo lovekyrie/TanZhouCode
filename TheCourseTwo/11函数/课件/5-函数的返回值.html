@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数的返回值</title>
+</head>
+<body>
+	<script>
+		/*
+			每个函数都默认返回一个 undefined
+			使用return 语句 让函数有一个返回值 返回的东西可以是任意的数据类型
+		*/
+
+		function f1(a,b){
+			console.log(a+b);
+		}
+
+		f1(1,2);
+		console.log(f1(2,2));
+
+		function f2(a,b){
+			// console.log(a+b);
+			// return a+b;
+			// 上面的是函数的执行语句
+
+			//下面的是函数的返回语句 
+			return "返回值";
+
+			// return 后面的语句不再执行
+			console.log("返回值后面的代码");
+		}
+
+		f2(1,2);
+		console.log(f2(2,2));
+
+		var b=f2(1,2); //函数执行 返回一个 字符串 
+
+	    var c=f2;
+	    // c(1,2);
+	    console.log(c); //function
+	    
+	</script>
+</body>
+</html>

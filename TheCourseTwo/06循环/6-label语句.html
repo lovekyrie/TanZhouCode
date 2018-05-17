@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>label</title>
+</head>
+<body>
+	<script>
+
+		var n=0;
+		out:
+		for(var i=0;i<5;i++){ //循环1
+			for(var j=0;j<5;j++){ //循环1
+				if(i===2){
+					//跳出整个for循环 包括外层
+					// 如果不用out 只是跳出i=2的这下面一层J循环
+					// 而且out必须写在for循环的上面 label只能搭配for循环使用
+					break out;
+				}
+				n++;
+			}
+		}
+
+		console.log(n);
+	</script>
+</body>
+</html>

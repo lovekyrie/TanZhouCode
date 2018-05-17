@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js代码解析</title>
+</head>
+<body>
+	
+	<script>
+		/*
+			js代码的执行顺序
+			是从上往下
+			变量提升
+			函数声明提升
+		*/
+
+		// console.log(1);
+		// console.log(2);
+
+		var a=1;
+		console.log(a);
+
+		console.log(b); //undefined
+		var b=2;
+		console.log(b); //2
+
+		// 报错中断代码执行
+		console.log(c); //Uncaught ReferenceError: c is not defined
+		// var c;
+		console.log(b); //2 不输出
+	</script>
+</body>
+</html>

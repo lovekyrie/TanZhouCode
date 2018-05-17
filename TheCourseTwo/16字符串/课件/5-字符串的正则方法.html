@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>字符串的正则方法</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		/*
+			match():
+				参数可是一个字符串 或者是一个正则表达式
+				匹配整个字符串中有没有这个字符 返回一个数组 没有就返回null
+			search()
+				参数可以是一个字符串 或者是一个正则表达式
+				搜索结果返回 的字符下标 没有则返回-1
+			replace()
+				两个参数 第一个可以是字符串或者正则表达式
+						 第二个可以是字符串或者函数
+			split()
+				参数可以是一个字符串 或者正则表达式
+				返回一个数组
+				如果不存在切割的属性 则返回整个
+		*/
+
+		var str="Hello World";
+		console.log(str.match("e"));
+		console.log(str.match(/o+/g));
+
+		console.log(str.search("o"));
+
+		console.log(str.replace("o","O"));
+		console.log(str.replace(/o+/g,"O"));
+
+		console.log(str.split('o'));
+		console.log(str.split('1'));
+	</script>
+</body>
+</html>

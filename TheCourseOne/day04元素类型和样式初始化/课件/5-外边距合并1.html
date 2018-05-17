@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>嵌套的情况</title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		div{
+			margin-top: 50px;
+			/*border:1px solid red;*/ /*answer1*/
+			/*padding-top: 100px;*/ /*answer2*/
+			overflow: hidden; /*answer3*/
+			width: 500px;
+			height: 500px;
+			background-color: blue;
+		}
+
+		p{
+			margin-top: 100px;
+			width: 300px;
+			height: 300px;
+			border:5px solid red;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p></p>
+	</div>
+
+	<script>
+		/*当两个盒子之间没有内边距或边框线，
+		给里面的盒子加上外边距，会自动把外边距合并到外面的盒子上。*/
+	</script>
+</body>
+</html>
