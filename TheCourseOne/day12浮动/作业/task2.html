@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .container {
+        width: 1194px;
+        height: 588px;
+        margin: 100px auto;
+        background-color: #fff;
+        border: 1px solid #cccbcb;
+    }
+
+    .nav ul {
+        width: 760px;
+        margin: 35px auto 17px;
+    }
+
+    .nav ul li {
+        float: left;
+    }
+
+    .nav li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 12px;
+    }
+
+    .nav ul .spacer {
+        width: 1px;
+        background-color: #cccbcb;
+        height: 16px;
+        margin: 2px 28px 0;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        content: "";
+        display: table;
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    }
+
+    .leftpanel,
+    .mid-left,
+    .mid,
+    .rightpanel {
+        border-bottom: 1px solid #cccbcb;
+        border-right: 1px solid #cccbcb;
+    }
+
+    /*父级盒子比子类小，然后溢出的不显示。否则子级的再这么小，父级显示完全还是无法隐藏*/
+    .content {
+        height: 490px;
+        width: 1176px;
+        margin: 8px;
+        overflow: hidden;
+    }
+
+    .content-c{
+        height: 500px;
+        width: 1190px;  
+    }
+
+    .content .leftpanel {
+        float: left;
+        background: url(images/demo3/1.jpg) no-repeat center;
+        width: 331px;
+        height: 498px;
+    }
+
+    .mid-left {
+        float: left;
+        width: 229px;
+        height: 498px;
+    }
+
+    .left-1 {
+        height: 247px;
+        background: url(images/demo3/2.jpg) no-repeat center;
+        border-bottom: 1px solid #cccbcb;
+    }
+
+    .left-2 {
+        height: 247px;
+        background: url(images/demo3/3.jpg) no-repeat center;
+    }
+
+    .mid {
+        float: left;
+        width: 210px;
+        height: 498px;
+    }
+
+    .mid-1,
+    .mid-2,
+    .mid-3 {
+        border-bottom: 1px solid #cccbcb;
+    }
+
+    .mid-1 {
+        height: 179px;
+        background: url(images/demo3/4.jpg) no-repeat center;
+    }
+
+    .mid-2 {
+        height: 163px;
+        background: url(images/demo3/5.jpg) no-repeat center;
+    }
+
+    .mid-3 {
+        height: 157px;
+        background: url(images/demo3/6.jpg) no-repeat center;
+    }
+
+    .rightpanel {
+        float: left;
+        width: 405px;
+        height: 498px;
+    }
+
+    .right-top {
+        height: 179px;
+    }
+
+    .top-1,
+    .top-3 {
+        border-right: 1px solid #cccbcb;
+        border-bottom: 1px solid #cccbcb;
+    }
+
+    .top-1 {
+        float: left;
+        width: 199px;
+        height: 179px;
+        background: url(images/demo3/7.jpg) no-repeat center;
+    }
+
+    .top-2 {
+        float: left;
+        width: 205px;
+        height: 179px;
+        background: url(images/demo3/8.jpg) no-repeat center;
+        border-bottom: 1px solid #cccbcb;
+    }
+
+    .right-bottom {
+        height: 320px;
+        width: 408px;
+        background: url(images/demo3/9.jpg) no-repeat center;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav clearfix">
+            <ul class="clearfix">
+                <li><a href="#">护肤</a></li>
+                <li class="spacer"></li>
+                <li><a href="#">彩妆</a></li>
+                <li class="spacer"></li>
+                <li><a href="#">美发</a></li>
+                <li class="spacer"></li>
+                <li><a href="#">美体</a></li>
+                <li class="spacer"></li>
+                <li><a href="#">香氛</a></li>
+                <li class="spacer"></li>
+                <li><a href="#">肌肤</a></li>
+                <li class="spacer"></li>
+                <li><a href="#">产品</a></li>
+                <li class="spacer"></li>
+                <li><a href="#">唇部</a></li>
+                <li class="spacer"></li>
+                <li><a href="#">精华</a></li>
+                <li class="spacer"></li>
+                <li><a href="#">修护</a></li>
+            </ul>
+        </div>
+       
+            <!-- 主体内容 -->
+            <div class="content">
+                 <div class="content-c">
+                <div class="leftpanel">
+                </div>
+                <div class="mid-left">
+                    <div class="left-1"></div>
+                    <div class="left-2"></div>
+                </div>
+                <div class="mid">
+                    <div class="mid-1"></div>
+                    <div class="mid-2"></div>
+                    <div class="mid-3"></div>
+                </div>
+                <div class="rightpanel">
+                    <div class="right-top">
+                        <div class="top-1">
+                        </div>
+                        <div class="top-2">
+                        </div>
+                    </div>
+                    <div class="right-bottom">
+                    </div>
+                </div>
+                </div>
+            </div>
+
+             <!-- 主体内容 -->
+        
+    </div>
+</body>
+
+</html>
